@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+    <string id="bar_regular_quest_barman_dialog_0">
+        <text>Слышал тебе помощь нужна?</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_1">
+        <text>Пока нет работы, позже приходи.</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_2">
+        <text>Нет пока, позже зайди</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_3">
+        <text>Разобрали уже, ваша лошадь тихо ходит.</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_4">
+        <text>Есть, вообщем слушай...</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_5">
+        <text>None</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_6">
+        <text>В следующий раз приду...</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_7">
+        <text>Хорошо</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_8">
+        <text>Хорошо</text>
+    </string>
+    <string id="bar_start_dialog_barman_0">
+        <text>Ну, как оно сталкер? Как здоровье?</text>
+    </string>
+    <string id="bar_start_dialog_dolg_trader_0">
+        <text>Ну, показывай, чего принес?</text>
+    </string>
+    <string id="bar_start_dialog_kalgun_arena_0">
+        <text>Здорова сталкер! Как говорится "Идущий на смерть, МЫ приветствуем тебя!"</text>
+    </string>
+    <string id="bar_start_dialog_mechanic_0">
+        <text>Починить? Поломку исправить? Тащи ко мне, разберемся?</text>
+    </string>
+    <string id="bar_start_dialog_medic_0">
+        <text>Как здоровье? Нужны медикаменты?</text>
+    </string>
+    <string id="bar_start_dialog_otshelnik_0">
+        <text>Ну здравствуй молодой человек, с чем пожаловал? С хорошими новостями, али с плохими? А может с подарками пришел, а?</text>
+    </string>
+    <string id="bar_start_dialog_sim_stalker_0">
+        <text>Ну привет...</text>
+    </string>
+    <string id="bar_start_dialog_voronin_0">
+        <text>Здравия желаю, с чем пожаловал?</text>
+    </string>
+    <string id="bar_story_kalgun_dialog_0">
+        <text>Привет, чем ты занимаешься?</text>
+    </string>
+    <string id="bar_story_kalgun_dialog_1">
+        <text>Здравствуй сталкер, гладитор наших дней! Хочешь заработать? Устроим бой и если победишь - честь и хвала тебе! А если проиграешь - вечный позор! Ну и про награду не забывай, награжу достойно. Об этом не переживай...</text>
+    </string>
+    <string id="bar_story_kalgun_dialog_2">
+        <text>Понял, буду иметь ввиду.</text>
+    </string>
+    <string id="bar_story_mechanic_dialog_0">
+        <text>Привет. чем ты тут занимешься?</text>
+    </string>
+    <string id="bar_story_mechanic_dialog_1">
+        <text>Привет, Азотом меня звать, будем знакомы. Я в технике разной копаюсь, если что нужно ты знаешь где меня найти.</text>
+    </string>
+    <string id="bar_story_mechanic_dialog_2">
+        <text>Понял, буду иметь ввиду.</text>
+    </string>
+    <string id="bar_story_medic_dialog_0">
+        <text>Привет, чем ты занимаешься?</text>
+    </string>
+    <string id="bar_story_medic_dialog_1">
+        <text>Ну привет, меня Хилом звать. Если какие болячки беспокоят помогу, нужны хилки - запросто! Ну аптечки там, бинты, таблы...Думаю ты меня понял. Снабжение тут от Долговцев классное, так что если нужно что, достанем.</text>
+    </string>
+    <string id="bar_story_medic_dialog_2">
+        <text>Понял, буду знать.</text>
+    </string>
+    <string id="bar_story_otshelnik_dialog_0">
+        <text>Чем ты тут занимаешься?</text>
+    </string>
+    <string id="bar_story_otshelnik_dialog_1">
+        <text>None</text>
+    </string>
+    <string id="bar_story_otshelnik_dialog_2">
+        <text>None</text>
+    </string>
+    <string id="bar_universal_dialog_0">
+        <text>Можно у тебя кое-что спросить?</text>
+    </string>
+    <string id="bar_universal_dialog_10">
+        <text>Есть тут механик один, Азотом звать. Может такое смастерить, закачаешься. Ему бы деталей побольше да инструментов...</text>
+    </string>
+    <string id="bar_universal_dialog_11">
+        <text>Ну, есть тут пара мест. Тот же бар "100 Рентген", или "Арена". А так, тут передохнуть можно от всей той параши, что вокруг творится. Оазис, я бы так назвал это место...</text>
+    </string>
+    <string id="bar_universal_dialog_12">
+        <text>Да ничего особенного, безопасный клочок земли среди ада на земле.</text>
+    </string>
+    <string id="bar_universal_dialog_13">
+        <text>Ясно, спасибо.</text>
+    </string>
+    <string id="bar_universal_dialog_14">
+        <text>Где тут можно заработать?</text>
+    </string>
+    <string id="bar_universal_dialog_15">
+        <text>Бармен постоянно ищет кого-то, думаю к нему тебе надо. Объяву даже по радио сделали.</text>
+    </string>
+    <string id="bar_universal_dialog_16">
+        <text>Сходи к бармену, найдешь у него работу.</text>
+    </string>
+    <string id="bar_universal_dialog_17">
+        <text>Вроде Азот искал на помощь кого-то, сходи к нему.</text>
+    </string>
+    <string id="bar_universal_dialog_18">
+        <text>Не знаю даже таких, у других спроси...Может кто ещё чего знает.</text>
+    </string>
+    <string id="bar_universal_dialog_2">
+        <text>Да, спрашивай</text>
+    </string>
+    <string id="bar_universal_dialog_3">
+        <text>Конечно, слушаю</text>
+    </string>
+    <string id="bar_universal_dialog_4">
+        <text>Слушай, не до разговоров мне...Отстань...</text>
+    </string>
+    <string id="bar_universal_dialog_5">
+        <text>Хорошо, не буду мешать</text>
+    </string>
+    <string id="bar_universal_dialog_6">
+        <text>Есть ли тут интересные места?</text>
+    </string>
+    <string id="bar_universal_dialog_7">
+        <text>Ты можно сказать в их эпицентре! Тут тебе и бар, и охрана, сплошной кайф!</text>
+    </string>
+    <string id="bar_universal_dialog_8">
+        <text>Если облучился или просто медикаменты нужны, сходи к Хилу. Он в здании слева от бара после ангара обитает. Рукастый мужик.</text>
+    </string>
+    <string id="bar_universal_dialog_9">
+        <text>Думаю да, можно сходить на арену к Калгану записаться, если в себе уверен. А можешь просто посмотреть как сталкера друг друга кромсать будут. Бывает такое покажут, кошмары неделями мучают...</text>
+    </string>
+</string_table>

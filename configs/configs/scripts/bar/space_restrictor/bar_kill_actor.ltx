@@ -1,0 +1,14 @@
+[logic]
+active = sr_idle
+
+[sr_idle]
+on_info = {+bar_kill_actor} sr_idle@timer 
+
+[sr_idle@timer]
+on_game_timer = 100 | sr_idle@hit
+
+[sr_idle@hit] 
+on_game_timer = 250 | sr_idle@actorkill %=hit_actor%
+
+[sr_idle@actorkill] 
+on_game_timer = 12 | %=kill_actor%

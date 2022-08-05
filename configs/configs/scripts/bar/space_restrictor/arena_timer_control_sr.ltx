@@ -1,0 +1,39 @@
+[logic]
+active = sr_idle@wait
+
+[sr_idle@wait]
+on_info  = {+arena_fight +arena_attack +arena_start_wantlive_1 -bar_arena_enemy_wantlive_1_death} sr_timer@fight_1
+on_info2 = {+arena_fight +arena_attack +arena_start_wantlive_2 -bar_arena_enemy_wantlive_2_death} sr_timer@fight_2
+on_info3 = {+arena_fight +arena_attack +arena_start_wantlive_3 -bar_arena_enemy_wantlive_3_death} sr_timer@fight_3
+on_info4 = {+arena_fight +arena_attack +arena_start_wantlive_4 -bar_arena_enemy_wantlive_4_death} sr_timer@fight_4
+on_info5 = {+arena_fight +arena_attack +arena_start_wantlive_5 -bar_arena_enemy_wantlive_5_death} sr_timer@fight_5
+
+[sr_timer@fight_1]
+type = dec
+start_value = 600000
+on_value = 0 | sr_idle@wait %=kill_squad(bar_arena_wantlive_1)%
+on_info = {-arena_fight -arena_attack} sr_idle@wait
+
+[sr_timer@fight_2]
+type = dec
+start_value = 600000
+on_value = 0 | sr_idle@wait %=kill_squad(bar_arena_wantlive_2)%
+on_info = {-arena_fight -arena_attack} sr_idle@wait
+
+[sr_timer@fight_3]
+type = dec
+start_value = 600000
+on_value = 0 | sr_idle@wait %=kill_squad(bar_arena_wantlive_3)%
+on_info = {-arena_fight -arena_attack} sr_idle@wait
+
+[sr_timer@fight_4]
+type = dec
+start_value = 600000
+on_value = 0 | sr_idle@wait %=kill_squad(bar_arena_wantlive_4)%
+on_info = {-arena_fight -arena_attack} sr_idle@wait
+
+[sr_timer@fight_5]
+type = dec
+start_value = 600000
+on_value = 0 | sr_idle@wait %=kill_squad(bar_arena_wantlive_5)%
+on_info = {-arena_fight -arena_attack} sr_idle@wait

@@ -1,0 +1,61 @@
+[logic@bar_smart_terrain_0_8_guard_1]
+active = walker@guard_1
+prior = 50
+
+[walker@guard_1]
+path_walk = guard_1_walk
+path_look = guard_1_look
+gather_items_enabled = true
+corpse_detection_enabled = true
+combat_ignore_keep_when_attacked = true 
+combat_ignore_cond = true
+invulnerable = true
+use_camp = true
+
+;================================================
+
+[logic@bar_smart_terrain_0_8_walker_1]
+active = walker@walker_1
+prior = 50
+
+[walker@walker_1]
+path_walk = walker_1_walk
+path_look = walker_1_walk
+gather_items_enabled = true
+corpse_detection_enabled = true
+combat_ignore_keep_when_attacked = true 
+combat_ignore_cond = true
+invulnerable = true
+use_camp = true
+
+;================================================
+
+[logic@bar_smart_terrain_0_8_animpoint_1]
+active = animpoint@animpoint_1
+prior = 50
+
+[animpoint@animpoint_1]
+cover_name = bar_smart_terrain_0_8_animpoint_1
+avail_animations = animpoint_sit_low
+gather_items_enabled = true
+corpse_detection_enabled = true
+combat_ignore_keep_when_attacked = true 
+combat_ignore_cond = true
+use_camp = true
+invulnerable = true
+
+;================================================
+
+[logic@bar_smart_terrain_0_8_animpoint_2]
+active = animpoint@animpoint_2
+prior = 50
+
+[animpoint@animpoint_2]
+cover_name = bar_smart_terrain_0_8_animpoint_2
+avail_animations = animpoint_sit_normal
+gather_items_enabled = true
+corpse_detection_enabled = true
+combat_ignore_keep_when_attacked = true 
+combat_ignore_cond = true
+use_camp = true
+invulnerable = true

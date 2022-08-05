@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+    <string id="bar_regular_quest_barman_dialog_0">
+        <text>I heard you need help?</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_1">
+        <text>I don't have a job for you yet, come back later.</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_2">
+        <text>No, not yet. Come back later.</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_3">
+        <text>The job's already sorted out. Try to be quicker next time.</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_4">
+        <text>Yes, so listen carefully...</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_5">
+        <text>None</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_6">
+        <text>I'll come back next time then...</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_7">
+        <text>Ok</text>
+    </string>
+    <string id="bar_regular_quest_barman_dialog_8">
+        <text>Alright</text>
+    </string>
+    <string id="bar_start_dialog_barman_0">
+        <text>So, how's it going, stalker? How's your health?</text>
+    </string>
+    <string id="bar_start_dialog_dolg_trader_0">
+        <text>Well, show me what you got.</text>
+    </string>
+    <string id="bar_start_dialog_kalgun_arena_0">
+        <text>Greetings, stalker! As the saying goes "Those who are about to die, WE salute you!"</text>
+    </string>
+    <string id="bar_start_dialog_mechanic_0">
+        <text>Got something need fixing? Bring it over here and we'll sort it out!</text>
+    </string>
+    <string id="bar_start_dialog_medic_0">
+        <text>How is your health? Do you need some medicine?</text>
+    </string>
+    <string id="bar_start_dialog_otshelnik_0">
+        <text>Well hello young man, what brings you here? Have you come with good news or bad news? Or maybe you came with gifts, eh?</text>
+    </string>
+    <string id="bar_start_dialog_sim_stalker_0">
+        <text>Well hello...</text>
+    </string>
+    <string id="bar_start_dialog_voronin_0">
+        <text>Greetings, what brings you here?</text>
+    </string>
+    <string id="bar_story_kalgun_dialog_0">
+        <text>Hi. What do you do here?</text>
+    </string>
+    <string id="bar_story_kalgun_dialog_1">
+        <text>Hello stalker, the modern gladiator! Do you wish to earn money? You may fight for it here. If you win, honor and praise will be bestown upon you! And if you lose, eternal disgrace you shall have! And don't forget, you'll earn a reward you deserve. Don't you worry about that...</text>
+    </string>
+    <string id="bar_story_kalgun_dialog_2">
+        <text>Got it, I'll keep it in mind.</text>
+    </string>
+    <string id="bar_story_mechanic_dialog_0">
+        <text>Hi. What do you do here?</text>
+    </string>
+    <string id="bar_story_mechanic_dialog_1">
+        <text>Hello, the name's Nitro. Nice to meet you. I'm the technician around here. If you need anything, you know where to find me.</text>
+    </string>
+    <string id="bar_story_mechanic_dialog_2">
+        <text>Got it, I'll keep it in mind.</text>
+    </string>
+    <string id="bar_story_medic_dialog_0">
+        <text>Hi. What do you do here?</text>
+    </string>
+    <string id="bar_story_medic_dialog_1">
+        <text>Well hello, I'm Heal. I can help you out with any illness you might have. And if you need some healing, don't be afraid to ask! I got first-aid kits, bandages, pills... I think you know what I mean. Duty has a good amount of supplies, so if you need anything, we'll get it for you.</text>
+    </string>
+    <string id="bar_story_medic_dialog_2">
+        <text>Got it, I'll keep that in mind.</text>
+    </string>
+    <string id="bar_story_otshelnik_dialog_0">
+        <text>What do you do here?</text>
+    </string>
+    <string id="bar_story_otshelnik_dialog_1">
+        <text>None</text>
+    </string>
+    <string id="bar_story_otshelnik_dialog_2">
+        <text>None</text>
+    </string>
+    <string id="bar_universal_dialog_0">
+        <text>May I ask you something?</text>
+    </string>
+    <string id="bar_universal_dialog_10">
+        <text>There's a mechanic here, his name is Nitro. He can make some amazing stuff. He needs more parts and tools though...</text>
+    </string>
+    <string id="bar_universal_dialog_11">
+        <text>Well, there are a couple of places here. Like the "100 Rads" bar, or the Arena. This place is just somewhere you can take a break from all the crap that's going on around the Zone. An oasis, that's what I'd call this place...</text>
+    </string>
+    <string id="bar_universal_dialog_12">
+        <text>Nothing much, a safe piece of land in the midst of hell on earth.</text>
+    </string>
+    <string id="bar_universal_dialog_13">
+        <text>I see, thanks.</text>
+    </string>
+    <string id="bar_universal_dialog_14">
+        <text>Where can I make money here?</text>
+    </string>
+    <string id="bar_universal_dialog_15">
+        <text>Barkeep is always looking for someone. I think you should go talk to him. He even puts out an ad on the radio.</text>
+    </string>
+    <string id="bar_universal_dialog_16">
+        <text>Go talk to Barkeep, ask him for a job.</text>
+    </string>
+    <string id="bar_universal_dialog_17">
+        <text>I heard Nitro was looking for someone to help him. Go ask him.</text>
+    </string>
+    <string id="bar_universal_dialog_18">
+        <text>I don't know. Go ask someone else, maybe they'll know...</text>
+    </string>
+    <string id="bar_universal_dialog_2">
+        <text>Sure, ask away.</text>
+    </string>
+    <string id="bar_universal_dialog_3">
+        <text>Of course, I'm listening.</text>
+    </string>
+    <string id="bar_universal_dialog_4">
+        <text>Look, I don't have time to talk... Leave me alone...</text>
+    </string>
+    <string id="bar_universal_dialog_5">
+        <text>Okay, I'll leave you to it.</text>
+    </string>
+    <string id="bar_universal_dialog_6">
+        <text>Are there any interesting places around here?</text>
+    </string>
+    <string id="bar_universal_dialog_7">
+        <text>You could say you're in the middle of everything that's interesting! There's the bar, security's working all around, it's just awesome!</text>
+    </string>
+    <string id="bar_universal_dialog_8">
+        <text>If you get irradiated or just need some medicine, go visit Heal. Он в здании слева от бара после ангара обитает. He's a pretty handy guy.</text>
+    </string>
+    <string id="bar_universal_dialog_9">
+        <text>I think so, you can go to Kalgan's arena and sign up for a fight if you're confident. Or you can just watch stalkers beat up each other. Sometimes those matches get so brutal, they give you nightmares for weeks...</text>
+    </string>
+</string_table>

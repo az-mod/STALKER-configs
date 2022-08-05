@@ -1,0 +1,27 @@
+[logic@stalker_monolith_trader]
+active = animpoint@monolith
+suitable = {=check_npc_name(stalker_monolith_trader)}
+prior = 200
+level_spot = trader
+trade = misc\trade\trade_monolith.ltx
+
+[animpoint@monolith]
+meet = meet_monolith
+combat_ignore_cond = false
+combat_ignore_keep_when_attacked = false
+invulnerable = true
+cover_name = rad_multiplayer_0_smart_cover_bandit
+avail_animations = animpoint_stay_table
+combat_ignore = combat_ignore
+
+[meet_monolith]
+close_anim 		= wait_na
+close_victim 	= actor
+use = {=actor_has_weapon} false, true
+snd_on_use = {=actor_has_weapon} meet_hello, nil
+meet_on_talking = false
+no_move = true
+abuse = false
+allow_break = false
+trade_enable = true
+close_distanse = 5

@@ -1,0 +1,28 @@
+[logic@bar_underground_dolg_base_voronin]
+active = animpoint
+level_spot = leader
+suitable = {=check_npc_name(bar_npc_voronin)} true, false
+prior = 300
+
+[animpoint]
+cover_name = bar_smart_terrain_1_0_animpoint_voronin
+gather_items_enabled = false
+corpse_detection_enabled = false
+combat_ignore_keep_when_attacked = true 
+combat_ignore_cond = true
+invulnerable = true
+meet = meet
+use_camp = false
+
+[meet]
+;close_snd_hello = 
+;close_snd_bye 	= 
+close_anim 	= nil
+close_victim 	= nil
+far_anim 	= nil
+far_victim 	= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use = {=actor_enemy} false, true
+allow_break 	= false

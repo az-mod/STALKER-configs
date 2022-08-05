@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="Time">
+		<text>Время</text>
+	</string>
+	<string id="actor">
+		<text>Одиночка</text>
+	</string>
+	<string id="army">
+		<text>Военный</text>
+	</string>
+	<string id="bandit">
+		<text>Бандит</text>
+	</string>
+	<string id="dolg">
+		<text>«Долг»</text>
+	</string>
+	<string id="ecolog">
+		<text>Учёный</text>
+	</string>
+	<string id="csky">
+		<text>«Чистое небо»</text>
+	</string>
+	<string id="arena_enemy">
+		<text>Арена:Противник</text>
+	</string>
+	<string id="arena_friend">
+		<text>Арена:Напарник</text>
+	</string>
+	<string id="ui_st_name_arena_enemy">
+		<text>Противник</text>
+	</string>
+	<string id="ui_st_name_arena_friend">
+		<text>Напарник</text>
+	</string>
+	<string id="filter_secondary_tasks_text">
+		<text>Попутные задания</text>
+	</string>
+	<string id="filter_treasures_text">
+		<text>Тайники</text>
+	</string>
+	<string id="freedom">
+		<text>«Свобода»</text>
+	</string>
+	<string id="killer">
+		<text>Наёмник</text>
+	</string>
+	<string id="missions_list">
+		<text>Список заданий</text>
+	</string>
+	<string id="monolith">
+		<text>«Монолит»</text>
+	</string>
+	<string id="monster">
+		<text>Мутант</text>
+	</string>
+	<string id="month_april">
+		<text>Апрель</text>
+	</string>
+	<string id="month_august">
+		<text>Август</text>
+	</string>
+	<string id="month_december">
+		<text>Декабрь</text>
+	</string>
+	<string id="month_february">
+		<text>Февраль</text>
+	</string>
+	<string id="month_january">
+		<text>Январь</text>
+	</string>
+	<string id="month_july">
+		<text>Июль</text>
+	</string>
+	<string id="month_june">
+		<text>Июнь</text>
+	</string>
+	<string id="month_march">
+		<text>Март</text>
+	</string>
+	<string id="month_may">
+		<text>Май</text>
+	</string>
+	<string id="month_november">
+		<text>Ноябрь</text>
+	</string>
+	<string id="month_october">
+		<text>Октябрь</text>
+	</string>
+	<string id="month_september">
+		<text>Сентябрь</text>
+	</string>
+	<string id="pda_btn_close">
+		<text>Выключить КПК</text>
+	</string>
+	<string id="pda_btn_logs">
+		<text>История сообщений</text>
+	</string>
+	<string id="pda_btn_logs_hint">
+		<text>Показать историю сообщений</text>
+	</string>
+	<string id="pda_btn_quests">
+		<text>Карта местности</text>
+	</string>
+	<string id="pda_btn_quests_hint">
+		<text>Показать карту Зоны и список заданий</text>
+	</string>
+	<string id="pda_btn_ranking">
+		<text>Статистика</text>
+	</string>
+	<string id="pda_btn_ranking_hint">
+		<text>Показать личную статистику</text>
+	</string>
+	<string id="pda_cur_time">
+		<text>Текущее время:</text>
+	</string>
+	<string id="pda_date_filter">
+		<text>Фильтр даты</text>
+	</string>
+	<string id="pda_filter_news">
+		<text>Показать новости</text>
+	</string>
+	<string id="pda_filter_talk">
+		<text>Показать диалоги</text>
+	</string>
+	<string id="pda_legend_caption">
+		<text>Условные обозначения</text>
+	</string>
+	<string id="pda_stat_1">
+		<text>Время в зоне:</text>
+	</string>
+	<string id="pda_stat_2">
+		<text>Пережито выбросов:</text>
+	</string>
+	<string id="pda_stat_3">
+		<text>Выполнено заданий:</text>
+	</string>
+	<string id="pda_stat_4">
+		<text>Убито мутантов:</text>
+	</string>
+	<string id="pda_stat_5">
+		<text>Убито сталкеров:</text>
+	</string>
+	<string id="pda_stat_6">
+		<text>Найдено артефактов:</text>
+	</string>
+	<string id="pda_stat_7">
+		<text>Найдено тайников:</text>
+	</string>
+	<string id="pda_stat_favorite_weapon">
+		<text>Любимое оружие</text>
+	</string>
+	<string id="pda_stat_mutant_killed">
+		<text>Самый сильный убитый мутант</text>
+	</string>
+	<string id="st_location">
+		<text>Местонахождение:</text>
+	</string>
+	<string id="st_target">
+		<text>Цель</text>
+	</string>
+	<string id="st_ui_pda_legend_additional_task">
+		<text>Побочное задание</text>
+	</string>
+	<string id="st_ui_pda_legend_enemies">
+		<text>Враги</text>
+	</string>
+	<string id="st_ui_pda_legend_friends">
+		<text>Друзья</text>
+	</string>
+	<string id="st_ui_pda_legend_leader">
+		<text>Лидер группировки</text>
+	</string>
+	<string id="st_ui_pda_legend_vip">
+		<text>Квестовый персонаж</text>
+	</string>
+	<string id="st_ui_pda_legend_main_task">
+		<text>Основное задание</text>
+	</string>
+	<string id="st_ui_pda_legend_neutrals">
+		<text>Нейтралы</text>
+	</string>
+	<string id="st_ui_pda_legend_scout">
+		<text>Проводник</text>
+	</string>
+	<string id="st_ui_pda_legend_secrets">
+		<text>Тайники</text>
+	</string>
+	<string id="st_ui_pda_legend_squad">
+		<text>Командир отряда</text>
+	</string>
+	<string id="st_ui_pda_legend_trader">
+		<text>Торговец</text>
+	</string>
+	<string id="stalker">
+		<text>Вольный сталкер</text>
+	</string>
+	<string id="ui_logs_center_caption">
+		<text>История сообщений</text>
+	</string>
+	<string id="ui_map_btn_center">
+		<text>Центрировать на игроке</text>
+	</string>
+	<string id="ui_map_btn_down">
+		<text>Переместить вниз</text>
+	</string>
+	<string id="ui_map_btn_left">
+		<text>Переместить влево</text>
+	</string>
+	<string id="ui_map_btn_legend">
+		<text>Показать легенду</text>
+	</string>
+	<string id="ui_map_btn_right">
+		<text>Переместить вправо</text>
+	</string>
+	<string id="ui_map_btn_up">
+		<text>Переместить вверх</text>
+	</string>
+	<string id="ui_map_btn_zmreset">
+		<text>Максимальное отдаление</text>
+	</string>
+	<string id="ui_map_btn_zoom_in">
+		<text>Приблизить</text>
+	</string>
+	<string id="ui_map_btn_zoom_out">
+		<text>Отдалить</text>
+	</string>
+	<string id="ui_ranking_center_caption">
+		<text>Достижения</text>
+	</string>
+	<string id="ui_task_btn_focus_center">
+		<text>Центрировать карту на задании</text>
+	</string>
+	<string id="ui_task_btn_focus_center2">
+		<text>Центрировать карту на задании</text>
+	</string>
+	<string id="zombied">
+		<text>Зомбированный</text>
+	</string>
+	<string id="zoom_in_btn_hint">
+		<text>масштаб +</text>
+	</string>
+	<string id="zoom_out_btn_hint">
+		<text>масштаб -</text>
+	</string>
+	<string id="st_ui_pda_legend_mechanic">
+		<text>Техник</text>
+	</string>
+	<string id="st_ui_pda_legend_medic">
+		<text>Медик</text>
+	</string>
+	<string id="ui_pda_secondary_task">
+		<text>Текущие задания</text>
+	</string>
+	<string id="ui_show_second_task_wnd">
+		<text>Скрыть или отобразить список заданий</text>
+	</string>
+	<string id="st_ui_pda_actor_box">
+		<text>Личный ящик</text>
+	</string>
+	<string id="zaton">
+		<text>Затон</text>
+	</string>
+	<string id="jupiter">
+		<text>Окрестности «Юпитера»</text>
+	</string>
+	<string id="pripyat">
+		<text>Припять</text>
+	</string>
+	<string id="jupiter_underground">
+		<text>Путепровод «Припять-1»</text>
+	</string>
+	<string id="labx8">
+		<text>Лаборатория X8</text>
+	</string>
+	<string id="filter_primary_objects_text">
+		<text>Локации</text>
+	</string>
+	<string id="filter_quest_npcs_text">
+		<text>Важные объекты</text>
+	</string>
+	<string id="st_ui_pda_legend_primary_objects">
+		<text>Локация</text>
+	</string>
+	<string id="st_jup_b32_has_af">
+		<text>Сканеры регистрируют присутствие артефактов:</text>
+	</string>
+	<string id="st_jup_b32_no_af">
+		<text>Согласно данным сканеров, артефакты отсутствуют</text>
+	</string>
+	<string id="st_ui_pda_secret">
+		<text>Тайник</text>
+	</string>
+	<string id="st_ui_pda_sleep_place">
+		<text>Место сна</text>
+	</string>
+	
+	<string id="st_ui_pda_legend_junkman">
+		<text>Старьевщик</text>
+	</string>
+	
+	<string id="level_escape">
+		<text>Кордон</text>
+	</string>
+	<string id="st_esc_a1_spot_name">
+		<text>Барьер</text>
+	</string>
+	<string id="st_esc_a2_spot_name">
+		<text>Деревня новичков</text>
+	</string>
+	<string id="st_esc_a3_spot_name">
+		<text>КПП</text>
+	</string>
+	<string id="st_esc_a4_spot_name">
+		<text>Лагерь бандитов</text>
+	</string>
+	<string id="st_esc_a5_spot_name">
+		<text>"АТП" База сталкеров</text>
+	</string>
+	<string id="st_esc_a6_spot_name">
+		<text>Элеватор</text>
+	</string>
+	<string id="st_esc_a7_spot_name">
+		<text>Аномалия "Пекарня"</text>
+	</string>
+	<string id="st_esc_a8_spot_name">
+		<text>Аномалия "Тупая яма"</text>
+	</string>
+	<string id="st_esc_a9_spot_name">
+		<text>Аномалия "Кислотная лужа"</text>
+	</string>
+	
+	<string id="level_bar">
+		<text>Бар</text>
+	</string>
+	
+	<string id="bar_a1_spot_name">
+		<text>Хижина отшельника</text>
+	</string>
+	<string id="bar_a2_spot_name">
+		<text>«Туманный лес»</text>
+	</string>
+	<string id="bar_a3_spot_name">
+		<text>Заброшеный ангар</text>
+	</string>
+	<string id="bar_a4_spot_name">
+		<text>Южный блокпост Долга</text>
+	</string>
+	<string id="bar_a5_spot_name">
+		<text>Вербовочный лагерь Чистого Неба</text>
+	</string>
+	<string id="bar_a6_spot_name">
+		<text>Главная база Долга</text>
+	</string>
+	<string id="bar_a7_spot_name">
+		<text>«Бар 100 рентген»</text>
+	</string>
+	<string id="bar_a8_spot_name">
+		<text>Северный блокпост Долга</text>
+	</string>
+	<string id="bar_a9_spot_name">
+		<text>«Арена»</text>
+	</string>
+	
+	<string id="st_search_treasure_sidor_habar_open">
+		<text>Открыть сейф</text>
+	</string>
+	<string id="st_search_treasure_sidor_habar_closed">
+		<text>Закрыто. Нужен ключ</text>
+	</string>
+	
+	<string id="actor_stalker">
+		<text>Вольный сталкер</text>
+	</string>
+	<string id="actor_bandit">
+		<text>Бандит</text>
+	</string>
+	
+	<string id="esc_locked_chasovshik_door">
+		<text>Постучать...</text>
+	</string>
+	<string id="esc_locked_chasovshik_door_1">
+		<text>ЗАКРЫТО (нужен ключ)</text>
+	</string>
+	<string id="esc_locked_sidor_door">
+		<text>ЗАКРЫТО (на переучет)</text>
+	</string>
+	
+	
+	<string id="ui_st_name_stalker">
+		<text>«Сталкеры»</text>
+	</string>
+	<string id="ui_st_name_bandit">
+		<text>«Бандиты»</text>
+	</string>
+	<string id="ui_st_name_bandit_2">
+		<text>«Ренегаты»</text>
+	</string>
+	<string id="ui_st_name_army">
+		<text>«Военные»</text>
+	</string>
+	<string id="ui_st_name_killer">
+		<text>«Наемники»</text>
+	</string>
+	<string id="ui_st_name_csky">
+		<text>«Чистое небо»</text>
+	</string>
+	<string id="ui_st_name_dolg">
+		<text>«Долг»</text>
+	</string>
+	<string id="ui_st_name_freedom">
+		<text>«Свобода»</text>
+	</string>
+	<string id="ui_st_name_ecolog">
+		<text>«Ученые»</text>
+	</string>
+	<string id="ui_st_name_monolith">
+		<text>«Монолит»</text>
+	</string>
+	<string id="ui_st_name_zombied">
+		<text>«Зомбированные»</text>
+	</string>
+	
+	<string id="tip_door_locked_reshotka">
+		<text>Дверь заперта с той стороны</text>
+	</string>
+	<string id="bar_ip_door_locked_lab">
+		<text>Дверь заперта</text>
+	</string>
+
+	<string id="ui_st_sr_level_changer_open">
+		<text>Вы действительно хотите перейти на другую локацию?</text>
+	</string>
+	<string id="ui_st_sr_level_changer_closed">
+		<text>Вы не сможете пройти дальше -  впереди неизведанные территории, где полно аномалий и мутантов. Необходима или консультация проводника или карта местности</text>
+	</string>
+	<string id="ui_st_sr_level_changer_impossible">
+		<text>Вы не сможете пройти дальше -  впереди неизведанные территории, где полно аномалий и мутантов. Необходима или консультация проводника или карта местности</text>
+	</string>
+	
+	
+	<string id="ui_st_sr_level_changer_impossible_gar_bar">
+		<text>Проход перекрыт группировкой "ДОЛГ"</text>
+	</string>
+	
+		<string id="ui_st_sr_level_changer_impossible_bar_gar">
+		<text>Проход временно закрыт, в связи с грядущим выбросом</text>
+	</string>
+	
+	
+	<!--FantomICW 23.03.14-->
+	<string id="level_garbage">
+		<text>Свалка</text>
+	</string>
+	<string id="level_labx5">
+		<text>Лаборатория X5</text>
+	</string>
+	<string id="lab_x14">
+		<text>Лаборатория X14</text>
+	</string>
+	<string id="level_city">
+		<text>Мертвый город</text>
+	</string>
+	
+	
+	<string id="city_a1_spot_name">
+		<text>Аномалия "Безысходность"</text>
+	</string>
+	<string id="city_a2_spot_name">
+		<text>Площадь Ленина</text>
+	</string>
+	<string id="city_a3_spot_name">
+		<text>Здание КПСС</text>
+	</string>
+	<string id="city_a4_spot_name">
+		<text>Дом культуры</text>
+	</string>
+	<string id="city_a5_spot_name">
+		<text>Парк отдыха имени "Гагарина"</text>
+	</string>
+	
+	<string id="st_search_bomba_used">
+		<text>"Заложить взрывчатку"</text>
+	</string>
+	<string id="ui_gui_bomba_caption">
+		<text>"Заложить взрывчатку"</text>
+	</string>
+	<string id="st_menu_rukzak_use">
+		<text>"Установить"</text>
+	</string>
+	<string id="st_menu_rukzak_close">
+		<text>"Закрыть"</text>
+	</string>
+	
+	<string id="st_upgr_bardolg_1">
+		<text>"Выполните больше поручений АЗОТА"</text>
+	</string>
+	<string id="st_upgr_bardolg_2">
+		<text>"Выполните больше поручений АЗОТА"</text>
+	</string>
+	<string id="st_upgr_bardolg_3">
+		<text>"Выполните больше поручений АЗОТА"</text>
+	</string>
+	
+
+	
+	
+	
+	
+</string_table>

@@ -1,0 +1,11 @@
+[logic]
+active = sr_level_changer
+
+[sr_level_changer]
+type				= {-bar_cover_surget_complete} close, {+bar_cover_surget_complete} open
+level_changer_sid	= bar_to_gar_lchanger_2
+spot 				= level_changer_down|to_gar
+travel_time         = 0|30
+save_text			= to_gar
+way_impossible		= bar_to_gar_impossible_2
+message_impossible	= {-bar_cover_surget_complete} ui_st_sr_level_changer_impossible_bar_gar

@@ -1,0 +1,8 @@
+[logic]
+active = sr_idle
+
+[sr_idle]
+on_actor_outside = {+bar_npc_dolg_general_dangerous_duty_start -bar_dangerous_duty_ranenie} sr_idle@nil %=kill_actor%
+on_info = {+bar_dangerous_duty_ranenie} sr_idle@nil
+
+[sr_idle@nil]

@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding="windows-1251"?>
+
+<xml>	
+<specific_character id="bar_npc_voronin" team_default = "1">
+		<name>bar_npc_voronin_name</name>
+		<icon>ui_inGame2_Voronin</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>Ћпытный сталкер. „етальнаЯ информациЯ отсутствует.</bio>
+		<class>bar_npc_voronin</class>
+		<community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human_01\dolg\</snd_config>
+		<rank>30</rank>
+		<reputation>0</reputation>
+		<money min="50000" max="150000" infinitive="1"/>
+		<visual>actors\stalker_exclusive\stalker_dolg_voronin</visual>
+		<supplies>
+			[spawn] \n
+
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+		</supplies>
+#include "gameplay\character_criticals_4.xml"
+
+<start_dialog>bar_start_dialog_voronin</start_dialog>
+<actor_dialog>actor_break_dialog</actor_dialog>
+	</specific_character>
+
+<specific_character id="bar_npc_barman" team_default = "1">
+		<name>bar_npc_barman_name</name>
+		<icon>ui_inGame2_Barmen</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>Опытный сталкер. Детальная информация отсутствует.</bio>
+		<class>bar_npc_barman</class>
+		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human_03\stalker\</snd_config>
+		<rank>60</rank>
+		<money min="900000" max="999999" infinitive="1"/>
+		<reputation>0</reputation>
+		<visual>actors\stalker_exclusive\bar_barman_walker</visual>
+		<supplies>
+			[spawn] \n
+
+#include "gameplay\character_items_3.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs_4.xml"
+		</supplies>
+#include "gameplay\character_criticals_4.xml"
+
+<start_dialog>bar_start_dialog_barman</start_dialog>
+<actor_dialog>bar_regular_quest_barman_dialog</actor_dialog>
+<actor_dialog>actor_break_dialog</actor_dialog>
+	</specific_character>
+	
+<specific_character id="bar_medic" team_default = "1">
+		<name>bar_medic_name</name>
+		<icon>ui_inGame2_neutral_1</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>Ћпытный сталкер. „етальнаЯ информациЯ отсутствует.</bio>
+		<class>bar_medic</class>
+		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<rank>25</rank>
+		<money min="250" max="1750" infinitive="1"/>
+		<reputation>0</reputation>
+		<visual>actors\stalker_neutral\stalker_neutral_1_mask_1</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm = 1 \n
+			ammo_9x18_fmj = 1 \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+		</supplies>
+#include "gameplay\character_criticals_4.xml"
+
+<start_dialog>bar_start_dialog_medic</start_dialog>
+<actor_dialog>bar_story_medic_dialog</actor_dialog>
+<actor_dialog>actor_break_dialog</actor_dialog>
+	</specific_character>
+
+<specific_character id="bar_npc_dolg_mechanic" team_default = "1">
+		<name>bar_npc_dolg_mechanic_name</name>
+		<icon>ui_inGame2_Azot</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>Ћпытный сталкер. „етальнаЯ информациЯ отсутствует.</bio>
+		<class>bar_npc_dolg_mechanic</class>
+		<mechanic_mode>1</mechanic_mode>
+		<community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human_01\dolg\</snd_config>
+		<rank>30</rank>
+		<reputation>0</reputation>
+		<money min="500000" max="1500000" infinitive="1"/>
+		<visual>actors\stalker_exclusive\bar_npc_dolg_mechanic</visual>
+		<supplies>
+			[spawn] \n
+
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+		</supplies>
+#include "gameplay\character_criticals_4.xml"
+
+<start_dialog>bar_start_dialog_mechanic</start_dialog>
+<actor_dialog>bar_story_mechanic_dialog</actor_dialog>
+<actor_dialog>actor_break_dialog</actor_dialog>
+	</specific_character>
+	
+<specific_character id="bar_npc_dolg_trader" team_default = "1">
+		<name>bar_npc_dolg_trader_name</name>
+		<icon>ui_inGame2_none</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>Ћпытный сталкер. „етальнаЯ информациЯ отсутствует.</bio>
+		<class>bar_npc_dolg_trader</class>
+		<community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human_01\dolg\</snd_config>
+		<rank>30</rank>
+		<reputation>0</reputation>
+		<money min="500000" max="1500000" infinitive="1"/>
+		<visual>actors\stalker_dolg\stalker_dolg_2</visual>
+		<supplies>
+			[spawn] \n
+
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+		</supplies>
+#include "gameplay\character_criticals_4.xml"
+
+<start_dialog>bar_start_dialog_dolg_trader</start_dialog>
+<actor_dialog>actor_break_dialog</actor_dialog>
+	</specific_character>
+	
+<specific_character id="bar_npc_kalgun_arena" team_default = "1">
+		<name>bar_npc_kalgun_arena_name</name>
+		<icon>ui_inGame2_neutral_2</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>Ћпытный сталкер. „етальнаЯ информациЯ отсутствует.</bio>
+		<class>bar_npc_kalgun_arena</class>
+		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human_02\stalker\</snd_config>
+		<rank>25</rank>
+		<money min="25000" max="175000" infinitive="0"/>
+		<reputation>0</reputation>
+		<visual>actors\stalker_neutral\stalker_neutral_2_mask_2</visual>
+		<supplies>
+			[spawn] \n
+			ammo_12x70_buck = 1 \n
+			wpn_wincheaster1300 \n
+			wpn_beretta \n
+			ammo_9x19_fmj = 1 \n
+			grenade_rgd5 = 1 \n
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+		</supplies>
+#include "gameplay\character_criticals_4.xml"
+
+<start_dialog>bar_start_dialog_kalgun_arena</start_dialog>
+<actor_dialog>bar_story_kalgun_dialog</actor_dialog>
+<actor_dialog>actor_break_dialog</actor_dialog>
+	</specific_character>
+	
+<specific_character id="bar_npc_otshelnik" team_default = "1">
+	<name>bar_npc_otshelnik_name</name>
+		<icon>ui_inGame2_Otshelnik</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>Ћпытный сталкер. „етальнаЯ информациЯ отсутствует.</bio>
+		<class>bar_npc_otshelnik</class>
+		<community>stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<rank>0</rank>
+		<reputation>0</reputation>
+		<money min="150" max="775" infinitive="0"/>
+		<visual>actors\stalker_quest\stalker_bomzara</visual>
+		<supplies>
+			[spawn] \n
+			wpn_toz34  \n
+			ammo_12x70_buck  = 1 \n
+			wpn_fort = 1 \n
+			ammo_9x18_fmj = 1 \n
+
+#include "gameplay\character_items.xml"
+#include "gameplay\character_food.xml"
+#include "gameplay\character_drugs.xml"
+		</supplies>
+#include "gameplay\character_criticals_4.xml"
+
+<start_dialog>bar_start_dialog_otshelnik</start_dialog>
+<actor_dialog>bar_story_otshelnik_dialog</actor_dialog>
+<actor_dialog>actor_break_dialog</actor_dialog>
+	</specific_character>
+	
+</xml>

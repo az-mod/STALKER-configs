@@ -1,0 +1,38 @@
+[mp_players_rukzak]:identity_immunities
+$spawn              	= ""
+GroupControlSection	= spawn_group
+cform				= skeleton
+class				= MP_PLBAG
+visual				= dynamics\devices\dev_rukzak\dev_rukzak.ogf
+
+;--------
+description					= "rukzak"
+default_to_ruck				= true
+sprint_allowed				= false;
+control_inertion_factor		= 0.0
+;----------
+
+inv_name			= Rukzak
+inv_name_short		= Rukzak
+inv_weight			= 0
+cost				= 0
+
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x			= 0
+inv_grid_y			= 18
+
+slot				= 5
+
+;///////////////////////////////////////////////
+;//	explosive items !!!
+;///////////////////////////////////////////////
+
+[inv_ruck]
+GroupControlSection	= spawn_group
+discovery_dependency =
+$spawn 				= "devices\inv_box_ruck"
+class				= S_INVBOX
+cform				= skeleton
+visual				= dynamics\devices\dev_rukzak\dev_rukzak.ogf
+script_binding      = bind_physic_object.init

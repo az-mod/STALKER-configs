@@ -1,0 +1,23 @@
+[logic] 
+active = sr_idle
+
+[sr_idle]
+on_info = {+bar_cover_surget_complete} sr_idle@2
+
+[sr_idle@2]
+on_actor_outside = {-bar_first_talk_barmen_complete} sr_idle@gameover %+bar_first_talk_barmen_fail%
+on_info = {+bar_first_talk_barmen_complete} sr_idle@3
+
+[sr_idle@gameover] 
+on_game_timer = 20 | %=game_over%
+
+[sr_idle@3]
+on_info = {+bar_first_talk_barmen_dialog_info} sr_idle@4 %=disable_ui%
+
+[sr_idle@4]
+on_game_timer = 15 | sr_idle@5 %=run_postprocess(black:3000:true) +bar_surget_quest_complite =SetWeather(default_cloudy_black_clean)%
+
+[sr_idle@5]
+on_game_timer = 40 | sr_idle@6 %+bar_new_details_open =bar_send_5_time =ChGameTime(5) =teleport_actor(bar_actor_teleport_waitsurget_walk:bar_actor_teleport_waitsurget_look) =enable_ui =stop_postprocess(3000) +bar_borland_start_release%
+
+[sr_idle@6]

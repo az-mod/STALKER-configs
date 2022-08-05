@@ -1,0 +1,19 @@
+[logic]
+active = sr_idle@wait_rupor_4
+
+[sr_idle@wait_rupor_4]
+on_info = {+arena_start_public} sr_idle@wait_4
+
+[sr_idle@wait_4]
+on_game_timer = 30 | sr_idle@play_arena_sound_4
+
+[sr_idle@play_arena_sound_4]
+on_game_timer = 10 | sr_idle@stop_arena_sound_4 %=play_sound(new_arena_public_4)%
+on_info = {-arena_start_public} sr_idle@stop_4
+
+[sr_idle@stop_arena_sound_4]
+on_signal = sound_end | sr_idle@play_arena_sound_4
+on_info = {-arena_start_public} sr_idle@stop_4
+
+[sr_idle@stop_4]
+on_game_timer = 50 | sr_idle@wait_4

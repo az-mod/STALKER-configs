@@ -1,0 +1,20 @@
+[logic]
+active = sr_idle
+
+[sr_idle]
+on_info = {+bar_expectation_barmen_part2_dialog_info} sr_idle@1 %=give_task(bar_house_in_the_swamp) =spawn_object(bar_npc_otshelnik:bar_npc_otshelnik_spawn)%
+
+[sr_idle@1]
+on_actor_inside = sr_idle@2 %+bar_house_in_the_swamp_dialog%
+
+[sr_idle@2]
+on_info = {+bar_house_in_the_swamp_death} sr_idle@3  %=spawn_object_in(bar_key_door:bar_npc_otshelnik)%
+
+[sr_idle@3]
+on_info = {+bar_laba_open_door_info} sr_idle@4
+
+[sr_idle@4]
+on_game_timer = 75 | sr_idle@nil %=bar_end_barmen_sms +bar_walker_lab_barmen_dialog_open%
+
+[sr_idle@nil]
+

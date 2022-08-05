@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="mp_community_selection">
+		<text>Choose loners first</text>
+	</string>
+	<string id="rp_team_1_name">
+		<text>«Bandits»</text>
+	</string>
+	<string id="rp_team_2_name">
+		<text>«Duty»</text>
+	</string>
+	<string id="rp_team_3_name">
+		<text>«Ecologists»</text>
+	</string>
+	<string id="rp_team_4_name">
+		<text>«Freedom»</text>
+	</string>
+	<string id="rp_team_5_name">
+		<text>«Mercenary»</text>
+	</string>
+	<string id="rp_team_6_name">
+		<text>«Military»</text>
+	</string>
+	<string id="rp_team_7_name">
+		<text>«Monolith»</text>
+	</string>
+	<string id="rp_team_8_name">
+		<text>«Loners»</text>
+	</string>
+	<string id="rp_team_9_name">
+		<text>«Secret»</text>
+	</string>
+	<string id="rp_team_1_desc">
+		<text>Members of the criminal underworld who came to the Zone for different reasons: to make money by selling artifacts, hide from the law or trade in weapons. The Zone is full of bandits, ranging from common thugs to serious criminals, most of whom are members of one gang or another. Although the Zone gangs frequently fight among themselves, the criminal element still poses a serious problem for normal stalkers.</text>
+	</string>
+	<string id="rp_team_2_desc">
+		<text>A paramilitary group known for its discipline, whose members live according to a strict code. Its members are divided into military ranks. They consider protecting the outside world from the Zone's dangers their primary objective. Most of the group's operations deal with the Zone's internal problems - mutants and bandits.</text>
+	</string>
+	<string id="rp_team_3_desc">
+		<text>A group of scientists sent into the Zone. They can't be really called a single faction, as there are many scientific groups sent by the government into the Zone. They have a mobile research laboratory near "Jupiter".</text>
+	</string>
+	<string id="rp_team_4_desc">
+		<text>Anarchists of the Zone. They embrace the idea that the Zone is a sanctuary of unlimited freedom for everyone; laws, rules, and conventions of the outside world are no longer valid here. Their motto is: "Do what you want, but don't bother others". They fight against all attempts to take control of the Zone, as well as against the mercenaries.</text>
+	</string>
+	<string id="rp_team_5_desc">
+		<text>Adventurers and cutthroats from across the world who do not shy away from even the dirtiest of jobs. The motto is logical and predictable: "Money doesn't stink". As long as artifacts are well-paid for, mercenaries will fight for control of their deposits. Equipped mainly with Western-made small arms.</text>
+	</string>
+	<string id="rp_team_6_desc">
+		<text>Soldiers who underwent special training following their service in the Zone or stalkers who voluntarily signed a contract with the Army. Usually equipped with various support gear and well-armed. Used mainly to study the causes and effects of the catastrophe and to map out the Zone. They can work on their own or in small detachments.</text>
+	</string>
+	<string id="rp_team_7_desc">
+		<text>This group displays many features of a religious sect. Its members believe in the existence of a complex alien crystal, the Monolith, located somewhere in the center of the Zone. Most stalkers treat Monolith adepts with contempt and consider them as lunatics. From its inception the group strives to block all progress towards the center of the Zone, protecting the Monolith from other stalkers, citing the latter's bad intentions towards the Monolith.</text>
+	</string>
+	<string id="rp_team_8_desc">
+		<text>Stalkers exploring the Zone on their own. Most stalkers work this way since being a member of a group takes precious time, and part of the loot. Then there are some who simply prefer solitude and independence.</text>
+	</string>
+	<string id="rp_team_9_desc">
+		<text>Secret comming soon faction</text>
+	</string>
+</string_table>

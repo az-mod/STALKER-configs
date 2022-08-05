@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+    <string id="zat_a2_stalker_barmen_start_dialog_0">
+        <text>Новичок здесь? Ничего, обживёшься... Сам знаешь, Зона - учитель жёсткий! Я Борода, тутошний бармен. Будут вопросы - подходи ко мне</text>
+    </string>
+    <string id="zat_b106_stalker_crab_start_0">
+        <text>Чувствую себя не очень, позже поговорим</text>
+    </string>
+    <string id="zat_b106_stalker_garmata_start_0">
+        <text>Ну, здоров</text>
+    </string>
+    <string id="zat_b106_stalker_gonta_start_0">
+        <text>Ну, здоров</text>
+    </string>
+    <string id="zat_b215_stalker_guide_start_0">
+        <text>Может, тебе нужен проводник? Покажу путь между аномалий, не дам попасть под выброс... Лоцман - к твоим услугам</text>
+    </string>
+    <string id="zat_b22_stalker_medic_dialog_start_0">
+        <text>Здравствуй. Нужна помощь?</text>
+    </string>
+    <string id="zat_b30_owl_stalker_trader_start_dialog_0">
+        <text>Нужны товары? Информация?... Или, может, это ты хочешь продать информацию мне?</text>
+    </string>
+    <string id="zat_b33_stalker_snag_dialog_start_0">
+        <text>Ну, здоров</text>
+    </string>
+    <string id="zat_b38_stalker_cop_start_dialog_0">
+        <text>Привет, сталкер. Не хочешь заработать и заодно помочь лагерю?</text>
+    </string>
+    <string id="zat_b3_stalker_tech_start_0">
+        <text>Эх, жаль, не застал ты товарищей моих - Шутника с Баржой... хорошо бы посидели! Мы ж были как братья, друг за дружку горой... и как только у нас так могло получиться?.. Я тут сижу, а они - неизвестно где...</text>
+    </string>
+    <string id="zat_b51_stalker_nimble_start_0">
+        <text>Приветствую. Я - Шустрый. Обычно ко мне обращаются за уникальным оружием. Редкие модели, прототипы, именные пушки - ну и элитное снаряжение там, последние разработки защитных и боевых костюмов... Каждая вещь проверяется мной лично, так что качество гарантировано!</text>
+    </string>
+    <string id="zat_b7_bandit_boss_sultan_start_dialog_0">
+        <text>Чего тебе?</text>
+    </string>
+</string_table>

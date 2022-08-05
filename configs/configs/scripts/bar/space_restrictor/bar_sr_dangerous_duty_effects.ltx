@@ -1,0 +1,13 @@
+[logic] 
+active = sr_idle
+
+[sr_idle]
+on_info = {+bar_sr_dangerous_duty_effects} sr_idle@1
+
+[sr_idle@1]
+on_game_timer = 50 | sr_idle@2  %=play_s3d_sound(weapons\heli_explosion) =bar_zapusk_effecta_vzriv_1%
+
+[sr_idle@2]
+on_game_timer = 20 | sr_idle@nil %=play_s3d_sound(weapons\f1_explode2) =bar_zapusk_effecta_vzriv_2%
+
+[sr_idle@nil]

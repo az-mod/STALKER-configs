@@ -1,0 +1,11 @@
+[logic]
+active = sr_idle
+
+[sr_idle]
+on_info = {-bar_discount_dolg_1 +bar_a2_azot_quest_0_talking_2 +bar_a2_azot_quest_1_talking_2} %+bar_discount_dolg_1%
+on_info2 = {-bar_discount_dolg_2 +bar_a2_azot_quest_2_talking_3 +bar_a2_azot_quest_3_talking_4} %+bar_discount_dolg_2%
+on_info3 = {-bar_discount_dolg_3 +bar_a2_dop_quest_spectr_used +bar_a2_dop_quest_4_talking_2} %+bar_discount_dolg_3%
+on_info4 = {+bar_discount_dolg_1 +bar_discount_dolg_2 +bar_discount_dolg_3} sr_idle@nil %+0000%
+;on_info5 = sr_idle@nil %+bar_discount_dolg_1 +bar_discount_dolg_2 +bar_discount_dolg_3%
+
+[sr_idle@nil]

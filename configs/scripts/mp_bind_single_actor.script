@@ -1,0 +1,127 @@
+
+function actor_init(npc)
+	npc:bind_object(actor_binder(npc))
+	printf_msg("bind single actor")
+end
+
+local cl_init_event_request_sended = false
+
+function reset_globals()
+	cl_init_event_request_sended = false
+end
+
+----------------------------------------------------------------------------------------------------------------------
+class "actor_binder" (object_binder)
+
+function actor_binder:__init (obj) super(obj)	
+	self.surge_manager_loaded	= false
+ 	self.fallout_manager_loaded = false
+	self.psistorm_manager_loaded = false
+	
+	self.surge_manager = surge_manager:get_surge_manager()
+	self.fallout_manager = fallout_manager:get_fallout_manager()
+	self.psistorm_manager = psi_storm_manager:get_psi_storm_manager()
+	
+	self.weather_manager = level_weathers.get_weather_manager()
+end
+
+----------------------------------------------------------------------------------------------------------------------
+
+function actor_binder:reinit()
+	object_binder.reinit(self)
+	local npc_id = self.object:id()
+	db.storage[npc_id] = { }
+	self.st = db.storage[npc_id]
+	self.st.pstor = nil
+end
+
+----------------------------------------------------------------------------------------------------------------------
+
+function actor_binder:net_spawn(data)
+	if object_binder.net_spawn(self,data) == false then
+		return false
+	end
+	if OnServer() then
+		db.add_actor(self.object)
+		self.weather_manager:reset()
+	end
+	return true
+end
+
+----------------------------------------------------------------------------------------------------------------------
+
+function actor_binder:net_destroy()
+	object_binder.net_destroy(self)	
+	if OnServer() then
+		db.del_actor(self.object)
+	else
+		db.del_obj(self.object)
+	end
+end
+
+----------------------------------------------------------------------------------------------------------------------
+
+function actor_binder:update(delta)
+	object_binder.update(self, delta)
+
+	if OnServer() then
+		--' обработка серверных эвентов
+		mp_events.process_server_events()
+	end
+	
+	if OnClient() then
+		--' обработка клиентских эвентов
+		mp_events.process_client_events()
+		--' запросить стартовый эвент
+		if not cl_init_event_request_sended then
+			mp_events.cl_send_request_init_event()
+			cl_init_event_request_sended = true
+		end
+	end
+		
+	if(self.surge_manager) then
+		if(self.surge_manager_loaded == false) then
+			self.surge_manager:initialize()
+			self.surge_manager_loaded = true
+		end
+		
+		if(self.surge_manager.levels_respawn[level.name()]) then
+			self.surge_manager:respawn_artefacts_and_replace_anomaly_zone()
+		end
+		self.surge_manager:update()
+	end
+	
+	if (self.fallout_manager) then	
+		if (self.fallout_manager_loaded == false) then
+			self.fallout_manager:initiolized()
+			self.fallout_manager_loaded = true
+		end
+		self.fallout_manager:update()
+	end
+	
+	if (self.psistorm_manager) then
+		if (self.psistorm_manager_loaded == false) then
+			self.psistorm_manager:initialize()
+			self.psistorm_manager_loaded = true
+		end
+		
+		self.psistorm_manager:update()
+	end
+
+	if OnServer() then
+		self.weather_manager:update()
+	end
+
+	--' Апдейт саундменеджера
+	xr_sound.update(self.object:id())
+end
+
+----------------------------------------------------------------------------------------------------------------------
+
+function actor_binder:save(packet)
+end
+
+----------------------------------------------------------------------------------------------------------------------
+
+function actor_binder:load(reader)
+end

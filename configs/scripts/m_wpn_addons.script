@@ -1,0 +1,489 @@
+----------------------
+-- File:   Wpn Addons
+-- Vers:   2.0
+-- Author: Shoker (2010-2011г)
+-- Оригинальная идея и реализация: Kirag, Dester (Arsenal Mod)
+-- Наляпивание аддонов для оружия, в частности прицелы и магазины.
+----------------------
+
+local ADDON_DEATACH_ITEM_SEC	=	"addons_box"
+
+
+local init_flag    = false
+local ini          = system_ini() 
+local addons_list  = {}
+local update_ammo  = nil
+
+
+--\\ Обработка таблиц при первом вызове
+function init()
+  if ini == nil then 
+     abort("There in no INI in m_wpn_addons.script")
+  end
+
+  addons_list         = collect_sections(ini, "mod_addons_list")
+
+end
+
+
+--\\ Колбек на спаун пушки (thx malandrinus)
+--\\ Устанавливаем кол-во патронов
+local function spawn_callback(slot, id, obj)
+ if update_ammo then
+    obj:set_ammo_elapsed(update_ammo) 
+    transfer_in_slot(obj, slot)	
+	update_ammo = nil	
+ end
+end
+
+
+--\\ Вызывается при юзанье предмета
+function use_item(obj)
+ if not init_flag then	-- инициализируем
+  init()
+  init_flag = true
+ end
+ 
+ if addons_list[obj:section()] then
+    use_addon(obj:section())
+ end
+
+ -- Снимаем все аддоны
+ if obj:section() == ADDON_DEATACH_ITEM_SEC then
+    remove_addons()
+    spawn_in_inv(ADDON_DEATACH_ITEM_SEC)
+ end
+
+end
+
+--\\ Вызывается при юзанье аддона
+function use_addon(sec)
+ local wpn  = db.actor:active_item()  
+ local slot = db.actor:active_slot()
+
+ if wpn==nil then
+  -- нет оружия в руках ГГ  --
+  spawn_in_inv(sec)
+  return 
+ end
+
+ -- Шаг 1: инициализируем все аддоны для нашего оружия
+ local scopes    = read_string(wpn:section(),"scopes", true)
+ local magazines = read_string(wpn:section(),"magazines", true)
+
+ if magazines==nil and scopes==nil then
+    spawn_in_inv(sec)
+    return
+ end
+
+ local addons    = slim_tbl(scopes, magazines)  -- сливаем 2 таблицы в одну
+	
+-- Шаг 2: Смотрим подходит ли аддон для нашего оружия
+ if addons[sec]==nil then
+  -- Аддон не подходит --
+  spawn_in_inv(sec)
+  return
+ end
+
+	
+ -- Шаг 3: Составим список инсталированных аддонов из секции оружия
+ local instaled_scope = "" 
+ local instaled_magazin = ""
+
+ for k, v in pairs(addons_list) do
+    if fstr(wpn:section(), k) then
+     if v=="scope" then
+       instaled_scope = k
+     else
+       instaled_magazin = k
+     end
+    end
+ end
+
+	
+ -- Шаг 4: Определим тип устанавливаемого нами аддона - магазин или оптика
+ local type = addons_list[sec]
+
+ if type=="" then
+  -- Не определён тип установленного аддона --
+  spawn_in_inv(sec)
+  return
+ end
+
+ -- Шаг 5: Подменяем секцию нашего оружия
+ local new_sect = ""
+ local parent_section = get_ltx(wpn:section(), "parent_section", "str")
+
+ if type=="magazin" then
+    new_sect = parent_section.."_"..sec
+
+    if instaled_scope~="" then
+       new_sect = new_sect.."_"..instaled_scope
+    end
+ else
+    local magaz = ""
+    if instaled_magazin~="" then
+       magaz = instaled_magazin.."_"
+    end
+
+   new_sect = parent_section.."_"..magaz..sec
+ end 
+
+	
+ -- Шаг 6: Спауним наше оружие и при необходимости возвращаем снятые аддоны ГГ
+ if new_sect~="" then
+   local old_wpn = alife():object(wpn:id())
+
+  -- Сохраняем информацию об установленных аддонах (глушитель, гранатомёт) и патронах
+   local def_params = sm_net_utils.Get_Data_Weapon(old_wpn)
+   local ammo_name  = get_ammo_name(nil, def_params.ammo_type)
+   local ammo_num   = wpn:get_ammo_in_magazine()
+
+   -- спауним в инвентарь патроны
+   if type=="magazin" then
+	 spawn_in_inv(ammo_name, ammo_num)	-- разряжаем
+     update_ammo = 0
+   else
+     update_ammo = ammo_num
+   end
+
+  -- Удаляем старое оружие, оно нам больше не нужно
+   db.actor:mark_item_dropped(wpn)  
+   alife():release(old_wpn,true)
+
+   -- Создаём новое оружие
+   local new_weapon = spawn(new_sect)
+   
+ -- Обрабатываем нет-пакетом наше новое оружие
+   local new_params = sm_net_utils.Get_Data_Weapon(new_weapon)
+
+   new_params.condition      = def_params.condition
+   new_params.addon_flags    = def_params.addon_flags
+   new_params.upgrade_count  = def_params.upgrade_count
+   new_params.upgrades       = def_params.upgrades       
+
+
+   sm_net_utils.Set_Data_Weapon(new_params, new_weapon)
+   level.client_spawn_manager():add( new_weapon.id, -1, spawn_callback, slot) 
+
+ -- Возвращаем аддоны, которые стояли до этого. 
+   if type=="magazin" then
+      if instaled_magazin~="" then
+         spawn_in_inv(instaled_magazin)
+      end
+   else
+      if instaled_scope~="" then
+         spawn_in_inv(instaled_scope)
+      end
+   end
+ else
+   abort("There in no new_section in m_wpn_addons.script")
+ end
+----------------------
+
+end
+
+
+-- Снимаем все установленные аддоны
+function remove_addons()
+local wpn = db.actor:active_item()  
+
+if wpn==nil then
+-- нет оружия в руках ГГ  --
+return 
+end
+
+-- Шаг 1: инициализируем все аддоны для нашего оружия
+local scopes    = read_string(wpn:section(),"scopes", true)
+local magazines = read_string(wpn:section(),"magazines", true)
+
+if magazines==nil and scopes==nil then
+ return
+end
+
+local addons    = slim_tbl(scopes, magazines)  -- сливаем 2 таблицы в одну
+
+local is_magazin_instaled = false	--\\ Флаг, что снимаем магаз
+
+-- Шаг 2: Спавним инсталированные аддоны в инвентарь
+for k, v in pairs(addons_list) do
+    if fstr(wpn:section(), k) then
+       spawn_in_inv(k)
+    end
+	
+	if magazines and magazines[k] then
+		is_magazin_instaled	= true
+	end
+end
+
+-- Шаг 3: Удаляем оружие и делаем новое
+   local old_wpn = alife():object(wpn:id())
+
+  -- Сохраняем информацию об установленных аддонах (глушитель, гранатомёт) и патронах
+   local def_params = sm_net_utils.Get_Data_Weapon(old_wpn)
+   local ammo_name  = get_ammo_name(nil, def_params.ammo_type)
+   local ammo_num   = wpn:get_ammo_in_magazine()
+   local new_sect   = get_ltx(wpn:section(), "parent_section", "str")
+
+   -- спауним в инвентарь патроны
+   if is_magazin_instaled then
+	 spawn_in_inv(ammo_name, ammo_num)	-- разряжаем
+     update_ammo = 0
+   else
+     update_ammo = ammo_num
+   end
+
+  -- Удаляем старое оружие, оно нам больше не нужно
+   db.actor:mark_item_dropped(wpn)  
+   alife():release(old_wpn,true)
+
+  -- Создаём новое оружие
+   local new_weapon = spawn(new_sect)
+
+
+ -- Обрабатываем нет-пакетом наше новое оружие
+   local new_params = sm_net_utils.Get_Data_Weapon(new_weapon)
+
+   new_params.condition      = def_params.condition
+   new_params.addon_flags    = def_params.addon_flags
+   new_params.upgrade_count  = def_params.upgrade_count
+   new_params.upgrades       = def_params.upgrades       
+
+   sm_net_utils.Set_Data_Weapon(new_params, new_weapon)
+   level.client_spawn_manager():add( new_weapon.id, -1, spawn_callback, slot) 
+end
+
+								-- ;;;;;;;;;;;;;;;;;;;;;;; --
+								-- Вспомогательные функции --
+								-- ;;;;;;;;;;;;;;;;;;;;;;; --
+
+
+-- Спауним объект в инвенторе
+function spawn_in_inv(section, ammo_cnt)
+ local npc = db.actor
+
+ if ammo_cnt then
+  if ammo_cnt > 0 then
+	create_ammo(section, npc:position(), npc:level_vertex_id(), npc:game_vertex_id(), npc:id(), ammo_cnt)
+  end
+ else
+  return alife():create(section, npc:position(), npc:level_vertex_id(), npc:game_vertex_id(), npc:id())
+ end
+ 
+end
+
+function create_ammo(section, position, lvi, gvi, pid, num)
+  local ini = system_ini()
+
+  local num_in_box = ini:r_u32(section, "box_size")
+
+  while num > num_in_box do
+    alife():create_ammo(section, position, lvi, gvi, pid, num_in_box)
+    num = num - num_in_box
+  end
+  alife():create_ammo(section, position, lvi, gvi, pid, num)
+end
+
+-- Просто спавним объект
+function spawn(section)
+  local npc = db.actor
+  return alife():create(section, npc:position() , npc:level_vertex_id() , npc:game_vertex_id())
+end
+
+
+-- Перетаскиваем предмет в инвентарь.
+-- item предмет, parent - от кого, target - к кому. Если последние два не указаны то в инвентарь ГГ
+function transfer_in_slot(item, slot)
+ db.actor:transfer_item(item, db.actor)
+end
+
+
+--------------------------------------------
+
+
+-- Собираем секции 
+function collect_sections(ini,sec)
+local r = {}
+	if ini:section_exist(sec) then
+		local n = ini:line_count(sec)
+		if n > 0 then
+			for i = 0,n-1 do
+				local res,id,val = ini:r_line(sec,i,"","")
+				if r[id] == nil then
+					r[id] = val
+				end
+			end
+		end
+	end
+
+return r
+end
+
+-- Читает строку из LTX фаила, и делает таблицу из слов, отделённых запятыми.
+-- если есть фаил, значит читает из него
+function read_string(ltx1,ltx2, conv, file)
+ if file==nil then file = system_ini() end
+ if conv==nil then conv = false end
+
+ if file:section_exist(ltx1) and file:line_exist(ltx1, ltx2) then
+  local str = file:r_string(ltx1,ltx2)
+  local tbl 
+  
+  if str == "" or str == nil then
+     tbl = nil
+  else
+	 tbl = str_explode(",", str, nil, nil, nil, conv)
+  end
+  
+  return tbl
+ end
+ 
+ return nil
+end
+
+
+
+-- определяем название секции патронов в активном стволе NPC (если не передан ammo_type то ф-я считает его сама)
+function get_ammo_name(npc, ammo_type)
+	if npc == nil then npc = db.actor end
+	local item = npc:active_item()
+	 if item ~= nil then
+		local sobj = alife():object(item:id())
+		if sobj and isWeapon(sobj) then
+            if ammo_type==nil then
+                local p = sm_net_utils.Get_Data_Weapon(item)
+                ammo_type = p.ammo_type
+            end
+                      
+			if ammo_type ~= nil then
+                local sini = system_ini()
+	            if sini:line_exist(item:section(),"ammo_class") then
+					local ammo_list = sini:r_string(item:section(),"ammo_class")
+					local num = nil
+					local tbl = {}
+					
+					for num in string.gfind( ammo_list,"([%w_%-.\\]+)%p*" ) do
+					  table.insert(tbl, num)
+					end
+
+					return tbl[ammo_type+1] 
+	            end
+			end
+		end
+	 end
+end
+
+
+function fstr(str, find)
+ return string.find(str, find)
+end
+
+
+function str_explode(div,str,pos1,pos2,clear, conv)
+	local t={}
+	local cpt, pos
+
+	if pos1 == nil then pos1 = 1 end
+	if pos2 == nil then pos2 = pos1 end
+
+	local cpt1 = string.find (str, div, pos1, true)
+	local cpt2 = string.find (str, div, pos2, true)
+
+	if cpt1 and cpt2 then
+
+		if cpt2-cpt1 > 5 then
+			cpt = cpt1
+			pos = pos1
+		else
+			cpt = cpt2
+			pos = pos2
+		end
+
+		repeat
+			if clear then
+				table.insert( t, trim(string.sub(str, 1, cpt-1)) )
+			else
+				table.insert( t, string.sub(str, 1, cpt-1) )
+			end
+			str = string.sub( str, cpt+string.len(div) )
+			cpt = string.find (str, div, pos, true)
+		until cpt==nil
+	end
+	if clear then
+		table.insert(t, trim(str))
+	else
+		table.insert(t, str)
+	end
+
+      if conv==true then 
+      t = convert_tbl(t)
+      end
+
+	return t
+end
+
+-- Конвертируем таблицу вида 1 = str в  str = params
+function convert_tbl(tbl, params)
+local t = {}
+ if params == nil then params = true end
+ for k,v in pairs(tbl) do
+     t[v] = params 
+ end
+return t
+end
+
+-- сливаем две таблицы в одну (использовать только с конвертированными таблицами ^
+function slim_tbl(tbl1, tbl2)
+	local t = tbl1
+
+	if t==nil then t = {} end
+
+	if tbl2~=nil then
+	 for k,v in pairs(tbl2) do
+		 t[k]=v
+	 end
+	end
+
+	return t
+end
+
+
+-- Получить строку из LTX фаила (для совместимости)
+local loaded_ltx = {}
+function get_ltx(l_name,l_string,type)
+ if not loaded_ltx[l_name] then
+	    loaded_ltx[l_name] = {}
+ end
+	
+ if loaded_ltx[l_name][l_string] then
+	return loaded_ltx[l_name][l_string]
+ end
+ 
+ if system_ini():section_exist(l_name) and system_ini():line_exist(l_name, l_string) then
+
+	if type==nil or type=="num_float" then   -- число с запятой
+	 loaded_ltx[l_name][l_string] = system_ini():r_float(l_name, l_string)
+	 return loaded_ltx[l_name][l_string]
+	end
+	
+	if type=="bol" then
+	 loaded_ltx[l_name][l_string] = system_ini():r_bool(l_name, l_string)
+	 return loaded_ltx[l_name][l_string]
+	end
+	
+	if type=="num" then   -- целое число
+	 loaded_ltx[l_name][l_string] = system_ini():r_u32(l_name, l_string)
+	 return loaded_ltx[l_name][l_string] 	 
+	end
+
+	if type=="str" then
+	 loaded_ltx[l_name][l_string] = system_ini():r_string(l_name, l_string)
+	 return loaded_ltx[l_name][l_string] 	 
+	end
+
+
+ end
+ 
+ return nil
+end
+

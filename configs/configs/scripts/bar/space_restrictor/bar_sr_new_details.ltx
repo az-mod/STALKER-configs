@@ -1,0 +1,36 @@
+[logic] 
+active = sr_idle
+
+[sr_idle]
+on_info = {-TEST_bar_1 +bar_new_details_open} sr_idle@1 %=scenario_autosave(st_save_bar)%
+on_info2 = {+TEST_bar_1} sr_idle@nil
+
+[sr_idle@1]
+on_game_timer = 40 | sr_idle@1a
+
+
+[sr_idle@1a]
+on_info = {+labx5_quest_doc_all} sr_idle@1b
+on_info2 = {+labx5_a2_quest_documents_fail} sr_idle@1c
+
+[sr_idle@1b]
+on_game_timer = 10 | sr_idle@2 %=bar_sidor_new_details_sms_1 +bar_doc_barmen_dialog_open%
+
+[sr_idle@1c]
+on_game_timer = 10 | sr_idle@2 %=bar_sidor_new_details_sms_2%
+
+
+[sr_idle@2]
+on_game_timer = 100 | sr_idle@3 %=spawn_object(bar_borland_bar:bar_borland_bar_spawn) =bar_barmen_new_details_sms =give_task(bar_new_details) +bar_new_details_barmen_dialog_open%
+
+[sr_idle@3]
+on_info = {+bar_new_details_complete} sr_idle@4 %=give_task(bar_expectation) +bar_borland_bar_release%
+
+[sr_idle@4]
+on_info = {+bar_new_details_barmen_dialog_info} sr_idle@nil %=bar_azot_work_sms%
+
+[sr_idle@5]
+on_game_timer = 100 | sr_idle@nil %=bar_barmen_work_arena%
+
+
+[sr_idle@nil]

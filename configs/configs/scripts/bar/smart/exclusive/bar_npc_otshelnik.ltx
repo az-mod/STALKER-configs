@@ -1,0 +1,29 @@
+[logic@bar_npc_otshelnik]
+active = animpoint@bar_npc_otshelnik
+suitable = {=check_npc_name(bar_npc_otshelnik)} true, false
+can_select_weapon = false
+prior = 50
+
+[animpoint@bar_npc_otshelnik]
+cover_name = bar_smart_otshelnik_base_animpoint
+avail_animations = animpoint_sit_normal
+gather_items_enabled = true
+corpse_detection_enabled = true
+combat_ignore_keep_when_attacked = true 
+combat_ignore_cond = true
+invulnerable = true
+meet = meet
+use_camp = false
+
+[meet]
+;close_snd_hello = bar_medic_meet
+;close_snd_bye 	= bar_medic_meet_bye
+close_anim 	= nil
+close_victim 	= nil
+far_anim 	= nil
+far_victim 	= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use = {=actor_enemy} false, true
+allow_break 	= false

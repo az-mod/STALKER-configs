@@ -1,0 +1,16 @@
+[smart_terrain];bar_squad_monster_4
+squad_id = 333
+max_population = 1
+arrive_dist = 65
+respawn_params = respawn@simulation_controller 
+
+[respawn@simulation_controller]
+spawn_controller
+
+[spawn_controller]
+spawn_squads = simulation_controller
+spawn_num = 1,1
+
+[exclusive]
+bar_npc_kalgun_arena = bar\npc\bar_npc_kalgun_arena.ltx
+zat_3_6_controller = bar\smart\exclusive\bar_smart_terrain_3_6.ltx

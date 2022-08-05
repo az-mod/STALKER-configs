@@ -1,0 +1,18 @@
+[logic]
+active = sr_idle@wait
+
+[sr_idle@wait]
+on_info  = {+arena_fight +arena_attack +arena_start_wantlive_1 -bar_arena_enemy_wantlive_1_death} sr_idle@rupor30 
+on_info2 = {+arena_fight +arena_attack +arena_start_wantlive_2 -bar_arena_enemy_wantlive_2_death} sr_idle@rupor30 
+on_info3 = {+arena_fight +arena_attack +arena_start_wantlive_3 -bar_arena_enemy_wantlive_3_death} sr_idle@rupor30 
+on_info4 = {+arena_fight +arena_attack +arena_start_wantlive_4 -bar_arena_enemy_wantlive_4_death} sr_idle@rupor30 
+on_info5 = {+arena_fight +arena_attack +arena_start_wantlive_5 -bar_arena_enemy_wantlive_5_death} sr_idle@rupor30 
+
+[sr_idle@rupor30]
+on_info  = {-arena_fight -arena_attack} sr_idle@wait
+on_timer = 30000 | sr_idle@rupor60 %=play_sound(mega_arena_30_sec)%
+
+[sr_idle@rupor60]
+on_info = {-arena_fight -arena_attack} sr_idle@wait
+on_timer = 30000 | sr_idle@rupor30 %=play_sound(mega_arena_60_sec)%
+

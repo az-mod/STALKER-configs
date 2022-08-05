@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="jupiter_mod">
+		<text>Окрестности «Юпитера»</text>
+	</string>
+	<string id="mod_test_level">
+		<text>Чёрная дыра</text>
+	</string>
+	<string id="ammo_type_usual">
+		<text>ОБ</text>
+	</string>
+	<string id="ammo_type_bp">
+		<text>БП</text>
+	</string>
+	
+
+	<string id="sit_anim_0">
+		<text>Сидеть(1)</text>
+	</string>
+	<string id="sit_anim_1">
+		<text>Сидеть(2)</text>
+	</string>
+	<string id="sit_anim_2">
+		<text>Сидеть(3)</text>
+	</string>
+	<string id="sleep_anim_0">
+		<text>Спать</text>
+	</string>
+	<string id="salute_0">
+		<text>Отдать честь</text>
+	</string>
+	<string id="hands_up_0">
+		<text>Поднять руки</text>
+	</string>
+	<string id="finger_0">
+		<text>Показать</text>
+	</string>
+	<string id="guard_0">
+		<text>Руки за спину</text>
+	</string>
+	<string id="prisoner_0">
+		<text>Заложник</text>
+	</string>
+	<string id="trans_0">
+		<text>Войти в транс</text>
+	</string>
+	<string id="psy_0">
+		<text>Пси атака</text>
+	</string>
+	<string id="wounded_0">
+		<text>Раненый</text>
+	</string>
+	<string id="exit_current_anim">
+		<text>Остановить анимацию</text>
+	</string>
+	<string id="bar_0">
+		<text>За барной стойкой(1)</text>
+	</string>
+	<string id="bar_1">
+		<text>За барной стойкой(2)</text>
+	</string>
+	<string id="hello_0">
+		<text>Приветствие</text>
+	</string>
+	<string id="no_0">
+		<text>Не знаю</text>
+	</string>
+	<string id="otzimani_0">
+		<text>Отжимания</text>
+	</string>
+
+
+	<string id="st_roleplay_pda_name">
+		<text>КПК</text>
+	</string>
+	<string id="st_roleplay_pda_descr">
+		<text>Карманный персональный компьютер. В условиях Зоны применяется как навигационное устройство, 
+		записная книжка, устройство связи и диктофон. Каждый КПК обладает уникальным кодом, 
+		зная который, можно отследить устройство. КПК может фиксировать количество сталкеров в радиусе до пятидесяти метров. 
+		Этот хоть и устаревшей модели, взломать его не так уж и просто, а раз есть и такая защита, значит есть что защищать.
+		</text>
+	</string>
+
+	<string id="st_roleplay_kanistra_name">
+		<text>Канистра</text>
+	</string>
+	<string id="st_roleplay_kanistra_descr">
+		<text>Обыкновенная канистра, можно наполнить какой либо жидкостью.</text>
+	</string>
+
+	<string id="st_roleplay_psy_device_name">
+		<text>Компактная пси-установка</text>
+	</string>
+	<string id="st_roleplay_psy_device_descr">
+		<text>Предмет неизвестного происхождения и назначения. Но достоверно известно, что некоторые образцы 
+		во включённом состоянии способны нанести вред человеческому мозгу и нервной системе, вызывая у 
+		человека сильные головные боли, потерю сознания, и в конечном счёте — превращение в зомбированного.
+		</text>
+	</string>
+
+	<string id="st_roleplay_notes_1_name">
+		<text>Записка</text>
+	</string>
+	<string id="st_roleplay_notes_1_descr">
+		<text>Записка с не понятным содержимым. Шифр или просто не разборчивый бред?</text>
+	</string>
+	<string id="st_roleplay_notes_2_name">
+		<text>Лист бумаги</text>
+	</string>
+	<string id="st_roleplay_notes_2_descr">
+		<text>Старый листок бумаги, в хорошем состоянии, можно использовать для записи какой-нибудь информации.</text>
+	</string>
+
+	<string id="st_roleplay_documents_1_name">
+		<text>Стопка данных в книжном переплете</text>
+	</string>
+	<string id="st_roleplay_documents_1_descr">
+		<text>Стопка бумаг, отчетов и экспертиз, в большинстве своем на непонятных формулах, разборчивых разве что для ученых. На обложке неразборчивым подчерком что то да написано.</text>
+	</string>
+
+	<string id="st_roleplay_documents_2_name">
+		<text>Документы</text>
+	</string>
+	<string id="st_roleplay_documents_2_descr">
+		<text>Документы, надпись на папке - Секретно. Наверное что-то ценное, а может и нет... Знающие люди подскажут.</text>
+	</string>
+	<string id="st_roleplay_documents_3_name">
+		<text>Документы</text>
+	</string>
+	<string id="st_roleplay_documents_3_descr">
+		<text>Документы, содержимое не разобрать, приложены схемы, рисунки, но не понятно чего. Знающие люди подскажут.</text>
+	</string>
+	<string id="st_roleplay_documents_4_name">
+		<text>Папка с информацией</text>
+	</string>
+	<string id="st_roleplay_documents_4_descr">
+		<text>Какие-то записи, приложена дискета, но что на ней не узнать без оборудования.</text>
+	</string>
+	<string id="st_roleplay_documents_5">
+		<text>Тетрадка</text>
+	</string>
+	<string id="st_roleplay_documents_5_desc">
+		<text>Обыкновенная тетрадь.</text>
+	</string>
+	<string id="st_roleplay_documents_6">
+		<text>Папка с записями</text>
+	</string>
+	<string id="st_roleplay_documents_6_desc">
+		<text>Видимо тут какая-то очень важная информация, без должного знания ничего не понятно.</text>
+	</string>
+
+	<string id="st_roleplay_flash_1_name">
+		<text>Флешка</text>
+	</string>
+	<string id="st_roleplay_flash_1_descr">
+		<text>Обыкновенная флешка обычного цвета, небольших размеров. Надпись, свидетельствующая об объёме и производителе давно стерта,
+		так что остаётся гадать что на ней..</text>
+	</string>
+	<string id="st_roleplay_flash_2_name">
+		<text>Флешка</text>
+	</string>
+	<string id="st_roleplay_flash_2_descr">
+		<text>Флэш-диск - удобное средство для переноса информации.</text>
+	</string>
+
+	<string id="st_roleplay_decoder_name">
+		<text>Декодер</text>
+	</string>
+	<string id="st_roleplay_decoder_descr">
+		<text>Нечто вроде мощной электронной отмычки. Надпись на задней крышке говорит о том, что это устройство способно взламывать все распростроненные типы шифрования.</text>
+	</string>
+
+	<string id="st_roleplay_psy_sensor_name">
+		<text>Сенсор ПП-4а</text>
+	</string>
+	<string id="st_roleplay_psy_sensor_descr">
+		<text>Устройство для замеров ПСИ-излучения.</text>
+	</string>
+
+	<string id="st_psy_helm_name">
+		<text>ПСИ-Шлем</text>
+	</string>
+	<string id="st_psy_helm_descr">
+		<text>Прототип пси-шлема разработанный учёными для защиты от ПСИ-излучения.</text>
+	</string>
+
+	<string id="st_roleplay_anomal_detector_1_name">
+		<text>GPS трекер</text>
+	</string>
+	<string id="st_roleplay_anomal_detector_1_descr">
+		<text>Занятная маленькая хреновина, передающая свой сигнал на частоту от 14 до 140 Гц на дистанцию до 2 километров.
+		Имеет защиту от влаги и пыли, так же оснащен противоударным корпусом.</text>
+	</string>
+	<string id="st_roleplay_anomal_detector_2_name">
+		<text>Универсальный детектор аномалий (УДА-14а)</text>
+	</string>
+	<string id="st_roleplay_anomal_detector_2_descr">
+		<text>Детектор аномалий, способный замерять данные аномальных образований.</text>
+	</string>
+
+	<string id="st_roleplay_anomal_scanner_name">
+		<text>Сканер Аномальной Активности</text>
+	</string>
+	<string id="st_roleplay_anomal_scanner_descr">
+		<text>В корпусе прибора воедино собраны детектор артефактов, аккумулятор и мощный передатчик. 
+		Эта штука должна сканировать аномалии, определяя количество и тип появившихся в них артефактов. 
+		Вся полученная информация должна автоматически пересылаться в бункер учёных.
+		</text>
+	</string>
+	<string id="st_roleplay_mutant_scanner_name">
+		<text>Сканер Присутствия Мутантов</text>
+	</string>
+	<string id="st_roleplay_mutant_scanner_descr">
+		<text>Комплекс из сканера аномальной активности, датчика присутствия мутантов (ограниченного радиуса действия) и блока записи. 
+		Прибор снабжён автоматическим выключателем, который срабатывает после накопления определённого количества данных.</text>
+	</string>
+
+	<string id="st_roleplay_access_card_descr">
+		<text>Магнитная ключ-карта, предназначен для открывания двери с электронным замком.</text>
+	</string>
+	<string id="st_roleplay_access_card">
+		<text>Магнитная ключ-карта</text>
+	</string>
+
+	<string id="st_roleplay_metal_tech_box">
+		<text>Металлический чемоданчик</text>
+	</string>
+	<string id="st_roleplay_metal_tech_box_descr">
+		<text>Металлический чемоданчик с кодовым замком.</text>
+	</string>
+
+	<string id="st_roleplay_memory">
+		<text>Модуль памяти</text>
+	</string>
+	<string id="st_roleplay_memory_descr">
+		<text>Модуль памяти, работоспособен.</text>
+	</string>
+
+	<string id="st_roleplay_metal_box_1">
+		<text>Стальной кейс</text>
+	</string>
+	<string id="st_roleplay_metal_box_1_descr">
+		<text>Обычный огнеупорный кейс с кодовым замком, достаточно крепкий что бы не быть грубо вскрытым. Внутри что то обязательно есть.</text>
+	</string>
+
+	<string id="st_roleplay_ruck">
+		<text>Рюкзак</text>
+	</string>
+	<string id="st_roleplay_ruck_descr">
+		<text>Походный рюкзак из прорезиненной камуфляжной ткани, не промокает и слабозаметен.</text>
+	</string>
+
+	<string id="st_roleplay_key">
+		<text>Ключ</text>
+	</string>
+	<string id="st_roleplay_key_descr">
+		<text>Обычный на вид ключ.</text>
+	</string>
+	<string id="st_roleplay_key_spec_descr">
+		<text>Довольно интересный ключ, на вид потертый, наверно часто использовался, интересно от чего он?</text>
+	</string>
+
+	<string id="st_roleplay_notebook">
+		<text>Ноутбук</text>
+	</string>
+	<string id="st_roleplay_notebook_descr">
+		<text>Ноут фирмы ASUS с процессором Intel i3 последнего поколения и SSD"шником на 512GB. на крышке странная гравировка, клавиши слегка потерты,
+		но это не мешает ему быть рабочим до сих пор.</text>
+	</string>
+
+	<string id="st_roleplay_gas">
+		<text>Баллон с газом Перин - В3</text>
+	</string>
+	<string id="st_roleplay_gas_descr">
+		<text>Баллон с опасным химическим веществом нервно - паралитического действия.</text>
+	</string>
+
+	<string id="st_roleplay_walkie_talkie">
+		<text>Рация</text>
+	</string>
+	<string id="st_roleplay_walkie_talkie_descr">
+		<text>Предмет, который есть почти у каждого сталкера. Позволяет сталкерам переговариваться между 
+		собой на расстоянии, отдавать распоряжения и получать приказы, и так далее. Наиболее часто встречается у военных.</text>
+	</string>
+
+	<string id="st_roleplay_metal_box_medkit">
+		<text>Набор медикаментов</text>
+	</string>
+	<string id="st_roleplay_metal_box_medkit_descr">
+		<text>Синий ящик, на крышке надпись - медикаменты, что внутри не известно.</text>
+	</string>
+
+	<string id="st_roleplay_ruck_real_descr">
+		<text>Походный рюкзак из прорезиненной камуфляжной ткани, не промокает и слабозаметен, поэтому идеально подходит для закладки своего тайника в каком-нибудь укромном месте.</text>
+	</string>
+</string_table>

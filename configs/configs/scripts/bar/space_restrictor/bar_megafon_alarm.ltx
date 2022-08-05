@@ -1,0 +1,29 @@
+[logic]
+active = sr_idle
+
+[sr_idle]
+on_info = {=is_squad_enemy_to_actor(bar_underground_dolg_base)}  sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info2 = {=is_squad_enemy_to_actor(bar_dolg_centr_base)}       sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info3 = {=is_squad_enemy_to_actor(bar_dolg_100rentgen)}       sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info4 = {=is_squad_enemy_to_actor(bar_dolg_blockhouse)}       sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info5 = {=is_squad_enemy_to_actor(bar_dolg_blockhouse_2)}     sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info6 = {=is_squad_enemy_to_actor(bar_stalker_100rentgen)}    sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info7 = {=is_squad_enemy_to_actor(bar_stalker_blockhouse)}    sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info8 = {=is_squad_enemy_to_actor(bar_stalker_network)}       sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info9 = {=is_squad_enemy_to_actor(bar_csky_lager)}            sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info10 = {=is_squad_enemy_to_actor(bar_dolg_street_walkers)}  sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+;on_info11 = {=is_squad_enemy_to_actor(bar_dolg_underground_guard)}  sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info12 = {=is_squad_enemy_to_actor(bar_stalker_angar_1)}  sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info13 = {=is_squad_enemy_to_actor(bar_stalker_angar_2)}  sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info14 = {=is_squad_enemy_to_actor(bar_stalker_angar_3)}  sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info15 = {=is_squad_enemy_to_actor(bar_stalker_angar_4)}  sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+on_info16 = {=is_squad_enemy_to_actor(bar_stalker_angar_5)}  sr_idle@alarm %+bar_megafon_alarm =stop_sound(bar_megafon)%
+
+[sr_idle@alarm]
+on_info = {+bar_megafon_alarm} sr_idle@alarm_wait %=play_sound(bar_megafon_alarm) =set_squad_enemy_to_actor(bar_underground_dolg_base) =set_squad_enemy_to_actor(bar_dolg_centr_base) =set_squad_enemy_to_actor(bar_dolg_100rentgen) =set_squad_enemy_to_actor(bar_dolg_blockhouse) =set_squad_enemy_to_actor(bar_dolg_blockhouse_2) =set_squad_enemy_to_actor(bar_stalker_100rentgen) =set_squad_enemy_to_actor(bar_stalker_blockhouse) =set_squad_enemy_to_actor(bar_stalker_network) =set_squad_enemy_to_actor(bar_csky_lager)%
+
+[sr_idle@alarm_wait]
+on_game_timer = 50 | sr_idle@alarm_sound %+bar_kill_actor%
+
+[sr_idle@alarm_sound]
+on_info = sr_idle@alarm_wait %=play_sound(bar_megafon_alarm)%

@@ -1,0 +1,31 @@
+[logic@bar_npc_dolg_mechanic]
+suitable = {=check_npc_name(bar_npc_dolg_mechanic)} true
+prior = 200
+can_select_weapon = false
+active = animpoint@base
+
+[animpoint@base]
+cover_name = bar_animpoint_mechanic
+reach_distance = 2
+avail_animations = animpoint_sit_normal
+use_camp = false
+meet = no_meet
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+
+[meet]
+close_snd_hello = bar_dolg_tech_hello
+close_snd_bye 	= bar_dolg_tech_bye
+close_anim 	= nil
+close_victim 	= nil
+far_anim 	= nil
+far_victim 	= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 5
+use = {=actor_enemy} false, true
+allow_break 	= false

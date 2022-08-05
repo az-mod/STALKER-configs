@@ -1,0 +1,13 @@
+[logic]
+active = sr_idle@wait
+
+[sr_idle@wait]
+on_actor_inside  = {+bar_arena_bodyguard_1_on +bar_arena_bodyguard_replace -bar_arena_bodyguard_replace_complit} %+bar_arena_bodyguard_replace_complit =create_squad(bodyguard_1_squad_base:bar_smart_friend_base)%
+on_actor_inside2 = {+bar_arena_bodyguard_2_on +bar_arena_bodyguard_replace -bar_arena_bodyguard_replace_complit} %+bar_arena_bodyguard_replace_complit =create_squad(bodyguard_2_squad_base:bar_smart_friend_base)%
+on_actor_inside3 = {+bar_arena_bodyguard_3_on +bar_arena_bodyguard_replace -bar_arena_bodyguard_replace_complit} %+bar_arena_bodyguard_replace_complit =create_squad(bodyguard_3_squad_base:bar_smart_friend_base)%
+on_actor_inside4 = {+bar_arena_friend_1_on +bar_arena_friend_replace -bar_arena_friend_replace_complit} %+bar_arena_friend_replace_complit =create_squad(friend_1_squad_base:bar_smart_friend_base)%
+on_actor_inside5 = {+bar_arena_friend_2_on +bar_arena_friend_replace -bar_arena_friend_replace_complit} %+bar_arena_friend_replace_complit =create_squad(friend_2_squad_base:bar_smart_friend_base)%
+on_actor_inside6 = {+bar_arena_friend_3_on +bar_arena_friend_replace -bar_arena_friend_replace_complit} %+bar_arena_friend_replace_complit =create_squad(friend_3_squad_base:bar_smart_friend_base)%
+on_info = {+bar_arena_bodyguard_replace_complit +bar_arena_friend_replace_complit} sr_idle@nil
+
+[sr_idle@nil]

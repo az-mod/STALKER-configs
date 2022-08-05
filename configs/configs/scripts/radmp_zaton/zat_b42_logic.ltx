@@ -1,0 +1,8 @@
+[logic]
+active = sr_idle@warning
+
+[sr_idle@warning]
+on_actor_in_zone = zat_b42_warning_space_restrictor | %=play_sound(zat_b42_controller_warning_1)%
+on_signal = sound_end | sr_idle@nill %=play_sound(zat_b42_controller_warning_2)%
+
+[sr_idle@nill]

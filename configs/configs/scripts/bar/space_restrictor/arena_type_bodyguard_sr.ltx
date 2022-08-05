@@ -1,0 +1,89 @@
+[logic]
+active = sr_idle@wait
+
+[sr_idle@wait]
+on_info  = {+arena_fight +arena_start_bodyguard_1 -bar_arena_enemy_bodyguard_1_death} sr_idle@spawn_1
+on_info2 = {+arena_fight +arena_start_bodyguard_2 -bar_arena_enemy_bodyguard_2_death} sr_idle@spawn_2
+on_info3 = {+arena_fight +arena_start_bodyguard_3 -bar_arena_enemy_bodyguard_3_death} sr_idle@spawn_3
+on_info4 = {+arena_fight +arena_start_bodyguard_4 -bar_arena_enemy_bodyguard_4_death} sr_idle@spawn_4
+on_info5 = {+arena_fight +arena_start_bodyguard_5 -bar_arena_enemy_bodyguard_5_death} sr_idle@spawn_5 %+arena_chempion_fight_bodyguard%
+
+;------------------------------------------›“¿œ π1------------------------------------------------
+[sr_idle@spawn_1]
+on_info  = {+bar_arena_bodyguard_1_on} sr_idle@wait_attack_1 %=remove_squad(bodyguard_1_squad_base) =create_squad(bodyguard_1_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_1:arena_smart_enemy)%
+on_info2 = {+bar_arena_bodyguard_2_on} sr_idle@wait_attack_1 %=remove_squad(bodyguard_2_squad_base) =create_squad(bodyguard_2_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_1:arena_smart_enemy)%
+on_info3 = {+bar_arena_bodyguard_3_on} sr_idle@wait_attack_1 %=remove_squad(bodyguard_3_squad_base) =create_squad(bodyguard_3_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_1:arena_smart_enemy)%
+
+[sr_idle@wait_attack_1]
+on_info  = {+arena_attack +bar_arena_bodyguard_1_on} sr_idle@fight_1 %=squad_arena_attack_nps(bar_arena_bodyguard_1:bar_npc_bodyguard_1_arena)%
+on_info2 = {+arena_attack +bar_arena_bodyguard_2_on} sr_idle@fight_1 %=squad_arena_attack_nps(bar_arena_bodyguard_1:bar_npc_bodyguard_2_arena)%
+on_info3 = {+arena_attack +bar_arena_bodyguard_3_on} sr_idle@fight_1 %=squad_arena_attack_nps(bar_arena_bodyguard_1:bar_npc_bodyguard_3_arena)%
+
+[sr_idle@fight_1]
+on_info = {+bar_arena_enemy_bodyguard_1_death} sr_idle@wait %-arena_fight -arena_attack%
+on_info2 = %=hit_enemy_door(bar_arena_bodyguard_1:arena_door_hit_zone_sr)%
+on_info3 = {+bar_arena_bodyguard_death -arena_bodyguard_1_fall} %+arena_bodyguard_1_fall%
+
+;------------------------------------------›“¿œ π2------------------------------------------------
+[sr_idle@spawn_2]
+on_info  = {+bar_arena_bodyguard_1_on} sr_idle@wait_attack_2 %=remove_squad(bodyguard_1_squad_base) =create_squad(bodyguard_1_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_2:arena_smart_enemy)%
+on_info2 = {+bar_arena_bodyguard_2_on} sr_idle@wait_attack_2 %=remove_squad(bodyguard_2_squad_base) =create_squad(bodyguard_2_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_2:arena_smart_enemy)%
+on_info3 = {+bar_arena_bodyguard_3_on} sr_idle@wait_attack_2 %=remove_squad(bodyguard_3_squad_base) =create_squad(bodyguard_3_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_2:arena_smart_enemy)%
+
+[sr_idle@wait_attack_2]
+on_info  = {+arena_attack +bar_arena_bodyguard_1_on} sr_idle@fight_2 %=squad_arena_attack_nps(bar_arena_bodyguard_2:bar_npc_bodyguard_1_arena)%
+on_info2 = {+arena_attack +bar_arena_bodyguard_2_on} sr_idle@fight_2 %=squad_arena_attack_nps(bar_arena_bodyguard_2:bar_npc_bodyguard_2_arena)%
+on_info3 = {+arena_attack +bar_arena_bodyguard_3_on} sr_idle@fight_2 %=squad_arena_attack_nps(bar_arena_bodyguard_2:bar_npc_bodyguard_3_arena)%
+
+[sr_idle@fight_2]
+on_info = {+bar_arena_enemy_bodyguard_2_death} sr_idle@wait %-arena_fight -arena_attack%
+on_info2 = %=hit_enemy_door(bar_arena_bodyguard_2:arena_door_hit_zone_sr)%
+on_info3 = {+bar_arena_bodyguard_death -arena_bodyguard_2_fall} %+arena_bodyguard_2_fall%
+
+;------------------------------------------›“¿œ π3------------------------------------------------
+[sr_idle@spawn_3]
+on_info  = {+bar_arena_bodyguard_1_on} sr_idle@wait_attack_3 %=remove_squad(bodyguard_1_squad_base) =create_squad(bodyguard_1_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_3:arena_smart_enemy)%
+on_info2 = {+bar_arena_bodyguard_2_on} sr_idle@wait_attack_3 %=remove_squad(bodyguard_2_squad_base) =create_squad(bodyguard_2_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_3:arena_smart_enemy)%
+on_info3 = {+bar_arena_bodyguard_3_on} sr_idle@wait_attack_3 %=remove_squad(bodyguard_3_squad_base) =create_squad(bodyguard_3_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_3:arena_smart_enemy)%
+
+[sr_idle@wait_attack_3]
+on_info  = {+arena_attack +bar_arena_bodyguard_1_on} sr_idle@fight_3 %=squad_arena_attack_nps(bar_arena_bodyguard_3:bar_npc_bodyguard_1_arena)%
+on_info2 = {+arena_attack +bar_arena_bodyguard_2_on} sr_idle@fight_3 %=squad_arena_attack_nps(bar_arena_bodyguard_3:bar_npc_bodyguard_2_arena)%
+on_info3 = {+arena_attack +bar_arena_bodyguard_3_on} sr_idle@fight_3 %=squad_arena_attack_nps(bar_arena_bodyguard_3:bar_npc_bodyguard_3_arena)%
+
+[sr_idle@fight_3]
+on_info = {+bar_arena_enemy_bodyguard_3_death} sr_idle@wait %-arena_fight -arena_attack%
+on_info2 = %=hit_enemy_door(bar_arena_bodyguard_3:arena_door_hit_zone_sr)%
+on_info3 = {+bar_arena_bodyguard_death -arena_bodyguard_3_fall} %+arena_bodyguard_3_fall%
+
+;------------------------------------------›“¿œ π4------------------------------------------------
+[sr_idle@spawn_4]
+on_info  = {+bar_arena_bodyguard_1_on} sr_idle@wait_attack_4 %=remove_squad(bodyguard_1_squad_base) =create_squad(bodyguard_1_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_4:arena_smart_enemy)%
+on_info2 = {+bar_arena_bodyguard_2_on} sr_idle@wait_attack_4 %=remove_squad(bodyguard_2_squad_base) =create_squad(bodyguard_2_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_4:arena_smart_enemy)%
+on_info3 = {+bar_arena_bodyguard_3_on} sr_idle@wait_attack_4 %=remove_squad(bodyguard_3_squad_base) =create_squad(bodyguard_3_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_4:arena_smart_enemy)%
+
+[sr_idle@wait_attack_4]
+on_info  = {+arena_attack +bar_arena_bodyguard_1_on} sr_idle@fight_4 %=squad_arena_attack_nps(bar_arena_bodyguard_4:bar_npc_bodyguard_1_arena)%
+on_info2 = {+arena_attack +bar_arena_bodyguard_2_on} sr_idle@fight_4 %=squad_arena_attack_nps(bar_arena_bodyguard_4:bar_npc_bodyguard_2_arena)%
+on_info3 = {+arena_attack +bar_arena_bodyguard_3_on} sr_idle@fight_4 %=squad_arena_attack_nps(bar_arena_bodyguard_4:bar_npc_bodyguard_3_arena)%
+
+[sr_idle@fight_4]
+on_info = {+bar_arena_enemy_bodyguard_4_death} sr_idle@wait %-arena_fight -arena_attack%
+on_info2 = %=hit_enemy_door(bar_arena_bodyguard_4:arena_door_hit_zone_sr)%
+on_info3 = {+bar_arena_bodyguard_death -arena_bodyguard_4_fall} %+arena_bodyguard_4_fall%
+
+;------------------------------------------›“¿œ π5------------------------------------------------
+[sr_idle@spawn_5]
+on_info  = {+bar_arena_bodyguard_1_on} sr_idle@wait_attack_5 %=remove_squad(bodyguard_1_squad_base) =create_squad(bodyguard_1_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_5:arena_smart_enemy)%
+on_info2 = {+bar_arena_bodyguard_2_on} sr_idle@wait_attack_5 %=remove_squad(bodyguard_2_squad_base) =create_squad(bodyguard_2_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_5:arena_smart_enemy)%
+on_info3 = {+bar_arena_bodyguard_3_on} sr_idle@wait_attack_5 %=remove_squad(bodyguard_3_squad_base) =create_squad(bodyguard_3_squad:arena_smart_friend) =create_squad(bar_arena_bodyguard_5:arena_smart_enemy)%
+
+[sr_idle@wait_attack_5]
+on_info  = {+arena_attack +bar_arena_bodyguard_1_on} sr_idle@fight_5 %=squad_arena_attack_nps(bar_arena_bodyguard_5:bar_npc_bodyguard_1_arena)%
+on_info2 = {+arena_attack +bar_arena_bodyguard_2_on} sr_idle@fight_5 %=squad_arena_attack_nps(bar_arena_bodyguard_5:bar_npc_bodyguard_2_arena)%
+on_info3 = {+arena_attack +bar_arena_bodyguard_3_on} sr_idle@fight_5 %=squad_arena_attack_nps(bar_arena_bodyguard_5:bar_npc_bodyguard_3_arena)%
+
+[sr_idle@fight_5]
+on_info = {+bar_arena_enemy_bodyguard_5_death} sr_idle@wait %-arena_fight -arena_attack%
+on_info2 = %=hit_enemy_door(bar_arena_bodyguard_5:arena_door_hit_zone_sr)%
+on_info3 = {+bar_arena_bodyguard_death -arena_bodyguard_5_fall} %+arena_bodyguard_5_fall%

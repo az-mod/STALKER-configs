@@ -1,0 +1,213 @@
+[logic@bodyguard_1]
+active = remark@bodyguard_1
+suitable = {=check_npc_name(bar_npc_bodyguard_1_arena)} true, false
+prior = 100
+
+[remark@bodyguard_1]
+on_game_timer = 160 | companion_guard@bodyguard_1
+
+[companion_guard@bodyguard_1]
+minimal_distance = 1  			;Расстояние от точки сопровождения до ГГ
+desired_distance = 2  			;Расстояние на котором НПС начинает выбирать точку сопровождения ГГ
+dist_walk = 3	  				;Расстояние от ГГ при котором НПС начинает двигаться за ГГ < dist_run
+dist_run  = 6  					;Расстояние от ГГ при котором НПС начинает доганять ГГ otherwise - sprint
+anim_idle = wait_trade 			;Дефолтная анимация
+anim_wait = hide				;Анимация ожидания
+anim_move = sneak_no_wpn		;Анимация движения
+anim_move_fast = sneak_run		;Анимация быстрого движения
+anim_move_veryfast = sprint		;Анимация очень быстрого движения
+
+gather_items_enabled = true
+corpse_detection_enabled = true
+combat_ignore_keep_when_attacked = false
+combat_ignore_cond = true
+help_wounded_enabled = false
+meet = no_meet
+on_info = {-arena_fight -arena_attack} remark@bodyguard_12
+
+;================================================
+[logic@bodyguard_2]
+active = remark@bodyguard_2
+suitable = {=check_npc_name(bar_npc_bodyguard_2_arena)} true, false
+prior = 100
+
+[remark@bodyguard_2]
+on_game_timer = 160 | companion_guard@bodyguard_2
+
+[companion_guard@bodyguard_2]
+minimal_distance = 1.5  			
+desired_distance = 3  			
+dist_walk = 5  					
+dist_run  = 8  				
+anim_wait = hide				
+anim_move = sneak_no_wpn		
+anim_move_fast = sneak_run		
+anim_move_veryfast = sprint		
+
+gather_items_enabled = true
+corpse_detection_enabled = true
+combat_ignore_keep_when_attacked = true
+combat_ignore_cond = true
+help_wounded_enabled = false
+meet = no_meet
+on_info = {-arena_fight -arena_attack} remark@bodyguard_12
+
+;================================================
+[logic@bodyguard_3]
+active = remark@bodyguard_3
+suitable = {=check_npc_name(bar_npc_bodyguard_3_arena)} true, false 
+prior = 100
+
+[remark@bodyguard_3]
+on_game_timer = 160 | companion_guard@bodyguard_3
+
+[companion_guard@bodyguard_3]
+minimal_distance = 2  			
+desired_distance = 4  			
+dist_walk = 6  					
+dist_run  = 12  				
+anim_wait = wait_na				
+anim_move = walk_noweap		
+anim_move_fast = walk_noweap		
+anim_move_veryfast = run
+
+gather_items_enabled = true
+corpse_detection_enabled = true
+combat_ignore_keep_when_attacked = true
+combat_ignore_cond = true
+help_wounded_enabled = false
+meet = no_meet
+on_info = {-arena_fight -arena_attack} remark@bodyguard_03
+
+;================================================
+[logic@friend_1]
+active = remark@friend_1
+suitable = {=check_npc_name(bar_npc_friend_1_arena)} true, false 
+prior = 100
+
+[remark@friend_1]
+on_game_timer = 160 | walker@friend_1
+
+[walker@friend_1]
+path_walk = friend_1_walk
+gather_items_enabled = true
+corpse_detection_enabled = true
+help_wounded_enabled = false
+use_camp = false
+meet = no_meet
+on_info = {-arena_fight -arena_attack} walker@friend
+
+;================================================
+[logic@friend_2]
+active = remark@friend_2
+suitable = {=check_npc_name(bar_npc_friend_2_arena)} true, false 
+prior = 100
+
+[remark@friend_2]
+on_game_timer = 160 | walker@friend_2
+
+[walker@friend_2]
+path_walk = friend_2_walk
+gather_items_enabled = true
+corpse_detection_enabled = true
+help_wounded_enabled = false
+use_camp = false
+meet = no_meet
+on_info = {-arena_fight -arena_attack} walker@friend
+
+;================================================
+[logic@friend_3]
+active = remark@friend_3
+suitable = {=check_npc_name(bar_npc_friend_3_arena)} true, false 
+prior = 100
+
+[remark@friend_3]
+on_game_timer = 160 | walker@friend_3
+
+[walker@friend_3]
+path_walk = friend_3_walk
+gather_items_enabled = true
+corpse_detection_enabled = true
+help_wounded_enabled = false
+use_camp = false
+meet = no_meet
+on_info = {-arena_fight -arena_attack} walker@friend
+
+;================================================
+
+[walker@friend]
+path_walk = all_walk
+path_look = all_look
+def_state_standing = wait
+def_state_moving = run
+gather_items_enabled = true
+corpse_detection_enabled = true
+help_wounded_enabled = false
+use_camp = false
+meet = meet@friend
+on_info  = {=actor_enemy} %=actor_neutral%
+on_info2 = {=is_wounded} %=actor_neutral =restore_health%
+
+[meet@friend]
+far_anim 	= nil
+far_victim 	= nil
+close_distance  = 3
+far_distance 	= 5
+use = {=actor_enemy} false, true
+allow_break 	= false
+trade_enable	= false
+
+;================================================
+
+[remark@bodyguard_12]
+gather_items_enabled = true
+corpse_detection_enabled = true
+help_wounded_enabled = false
+use_camp = false
+on_info  = {=actor_enemy} %=actor_neutral%
+on_info2 = {=is_wounded} %=actor_neutral =restore_health%
+on_info3 = {=dist_to_actor_le(3)} walker@bodyguard_12 %=play_sound(help_thanks)%
+
+[remark@bodyguard_03]
+gather_items_enabled = true
+corpse_detection_enabled = true
+help_wounded_enabled = false
+use_camp = false
+on_info  = {=actor_enemy} %=actor_neutral%
+on_info2 = {=is_wounded} %=actor_neutral =restore_health%
+on_info3 = {=dist_to_actor_le(3)} walker@bodyguard_03 %=play_sound(help_thanks)%
+
+[walker@bodyguard_12]
+path_walk = all_walk
+path_look = all_look
+def_state_standing = wait
+def_state_moving = run
+gather_items_enabled = true
+corpse_detection_enabled = true
+help_wounded_enabled = false
+use_camp = false
+meet = meet@bodyguard
+;on_info  = {=actor_enemy} %=actor_neutral%
+;on_info2 = {=is_wounded} %=actor_neutral =restore_health%
+
+[walker@bodyguard_03]
+path_walk = all_walk
+path_look = all_look
+def_state_standing = wait
+def_state_moving = walk_noweap
+gather_items_enabled = true
+corpse_detection_enabled = true
+help_wounded_enabled = false
+use_camp = false
+meet = meet@bodyguard
+;on_info  = {=actor_enemy} %=actor_neutral%
+;on_info2 = {=is_wounded} %=actor_neutral =restore_health%
+
+[meet@bodyguard]
+far_anim 	= nil
+far_victim 	= nil
+close_distance  = 3
+far_distance 	= 5
+use = {=actor_enemy} false, true
+allow_break 	= false
+trade_enable	= false

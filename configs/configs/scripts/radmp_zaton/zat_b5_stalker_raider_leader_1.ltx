@@ -1,0 +1,32 @@
+[logic@zat_b5_stalker_raider_leader_1]
+suitable = {=check_npc_name(zat_b5_stalker_raider_leader_1)} true
+prior = 200
+active = walker@raider_leader_hello
+
+[walker@raider_leader_hello]
+path_walk = raider_1_walk
+path_look = raider_1_look
+meet = meet@hello_players
+invulnerable = true
+def_state_standing = guard
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+
+[meet@hello_players]
+close_anim = hello
+close_snd_hello = nil
+close_snd_bye = nil
+close_victim = mp_actor
+close_distance  = 2
+far_distance 	= 20
+close_snd_distance = 6
+far_anim = hello
+far_victim = mp_actor
+far_snd = zat_b7_raiders_to_boss
+use = {=actor_enemy} false, true
+allow_break = false
+trade_enable = false
+meet_on_talking = false

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="mutant_boar_leg">
+		<text>Boar's hoof</text>
+	</string>
+	<string id="mutant_boar_leg_description">
+		<text>Boar's hoof is used by scientists to produce a number of medicines, the most common of which is an anti-radiation serum.</text>
+	</string>
+	<string id="mutant_dog_tail">
+		<text>Dog tail</text>
+	</string>
+	<string id="mutant_dog_tail_description">
+		<text>The resistance of mutant dogs' skin to electricity and chemical agents has long been the subject of scientific attention. Since the animal's tail is almost completely free of fat tissue, it is especially suited for lab examination.</text>
+	</string>
+	<string id="mutant_flesh_eye">
+		<text>Flesh eye</text>
+	</string>
+	<string id="mutant_flesh_eye_description">
+		<text>The mutated, swollen eye of the Flesh acquired a number of strange characteristics, the most useful of which is the ability to regenerate the lens. The specifics of the process are hitherto unknown, although such discovery would most certainly revolutionize modern medicine. You can play your part in scientific development by selling Flesh eyes to scientists for their experiments.</text>
+	</string>
+	<string id="mutant_krovosos_jaw">
+		<text>Bloodsucker tentacles</text>
+	</string>
+	<string id="mutant_krovosos_jaw_description">
+		<text>Bloodsucker tentacles contain a special gland producing a ferment capable of dissolving the skin and simultaneously preventing blood from clotting. Discovering the ferment's composition could be the cornerstone of a whole series of great medical advances.</text>
+	</string>
+	<string id="mutant_psevdodog_tail">
+		<text>Pseudodog tail</text>
+	</string>
+	<string id="mutant_psevdodog_tail_description">
+		<text>The resistance of mutant dogs' skin to electricity and chemical agents has long been the subject of scientific attention. Since the animal's tail is almost completely free of fat tissue, it is especially suited for lab examination.</text>
+	</string>
+	<string id="mutant_snork_leg">
+		<text>Snork foot</text>
+	</string>
+	<string id="mutant_snork_leg_description">
+		<text>Snork feet contain a huge number of highly elastic tendons. This explains the beast's ability to make those unbelievably long jumps.</text>
+	</string>
+	<string id="mutant_hand_kontroler">
+		<text>Controller's hand</text>
+	</string>
+	<string id="mutant_hand_kontroler_description">
+		<text>The controller's psy abilities allow it to create various hallucinations at a distance, as well as inflict damage in close range. Scientists belive that its powers lie in its hand. The controller's hand has yet to be fully investigated.</text>
+	</string>
+	<string id="mutant_psevdogigant_hand">
+		<text>Pseudogiant's hand</text>
+	</string>
+	<string id="mutant_psevdogigant_hand_description">
+		<text>The pseudogiant's hand has properties that scientists have not yet explained, but they will pay good money for it.</text>
+	</string>
+	<string id="mutant_poltergeist_glas">
+		<text>Poltergeist's Eye</text>
+	</string>
+	<string id="mutant_poltergeist_glas_description">
+		<text>No one knows why the scientists need a poltergeist's eye, but they pay good money for it.</text>
+	</string>
+	<string id="mutant_face_tushkano">
+		<text>Tushkano's head</text>
+	</string>
+	<string id="mutant_face_tushkano_description">
+		<text>Tushkanos have a highly developed intelligence, and scientists are trying to figure out how their tiny brains hold a lot of information. Scientists make medicine from their brains, but that's as much as stalkers know, as the brains are transported out of the Zone for unknown purposes.</text>
+	</string>	
+	<string id="mutant_burer_hand">
+		<text>Burer's hand</text>
+	</string>
+	<string id="mutant_burer_hand_description">
+		<text>Burer's hand has acquired a number of properties, the most useful of which is a strong resistance to radiation. The exact reasons for this are not exactly known. You can contribute to science by selling the burer's hand to scientists for research.</text>
+	</string>
+	<string id="mutant_chimera_nail">
+		<text>Chimera's Claw</text>
+	</string>
+	<string id="mutant_chimera_nail_description">
+		<text>The chimera can easily cut through metal with its claws. The molecular structure of the mutant's claw tissues is of great interest to scientists.</text>
+	</string>
+
+	<string id="burer_character_use">
+		<text>Click ($$ACTION_USE$$) to cut off a part of the burer.</text>
+	</string>
+	<string id="chimera_character_use">
+		<text>Click ($$ACTION_USE$$) to cut off a part of the chimera.</text>
+	</string>
+	<string id="kontroler_character_use">
+		<text>Click ($$ACTION_USE$$) to cut off a part of the controller.</text>
+	</string>
+	<string id="psevdogigant_character_use">
+		<text>Click ($$ACTION_USE$$) to cut off a part of the pseudogiant.</text>
+	</string>
+	<string id="poltergeist_character_use">
+		<text>Click ($$ACTION_USE$$) to cut off a part of the poltergeist.</text>
+	</string>
+	<string id="tushkano_character_use">
+		<text>Click ($$ACTION_USE$$) to cut off a part of the tuskano.</text>
+	</string>
+	<string id="boar_character_use">
+		<text>Click ($$ACTION_USE$$) to cut off a part of the boar.</text>
+	</string>
+	<string id="krovosos_character_use">
+		<text>Click ($$ACTION_USE$$) to cut off a part of the blowsucker.</text>
+	</string>
+	<string id="dog_character_use">
+		<text>Click ($$ACTION_USE$$) to cut off a part of the blind dog.</text>
+	</string>
+	<string id="psevdodog_character_use">
+		<text>Click ($$ACTION_USE$$) to cut off a part of the pseudodog.</text>
+	</string>
+	<string id="flesh_character_use">
+		<text>Click ($$ACTION_USE$$) to cut off a part of the flesh.</text>
+	</string>
+	<string id="snork_character_use">
+		<text>Click ($$ACTION_USE$$) to cut off a part of the snork.</text>
+	</string>
+	<string id="monstr_character_use">
+		<text>Click ($$ACTION_USE$$) to cut off a part of the mutant.</text>
+	</string>
+	
+</string_table>

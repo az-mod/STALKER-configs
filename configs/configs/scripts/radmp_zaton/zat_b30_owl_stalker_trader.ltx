@@ -1,0 +1,19 @@
+[logic@zat_b30_owl_stalker_trader]
+suitable = {=check_npc_name(zat_b30_owl_stalker_trader)} true
+prior = 200
+trade = misc\trade\zat_b30_owl_stalker_trader.ltx
+can_select_weapon = false
+active = animpoint@base
+
+[animpoint@base]
+cover_name = zat_a2_sc_trader
+reach_distance = 2
+avail_animations = animpoint_stay_table
+use_camp = false
+meet = no_meet
+combat_ignore_cond = true
+combat_ignore_keep_when_attacked = true
+invulnerable = true
+gather_items_enabled = false
+help_wounded_enabled = false
+corpse_detection_enabled = false

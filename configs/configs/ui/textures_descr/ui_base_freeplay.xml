@@ -1,0 +1,18 @@
+<w>
+
+    <file name="ui\ui_base_freeplay">
+
+	<texture id="ui_base_freeplay_main" x="0" y="0" width="558" height="373" />
+	
+	
+	<texture id="ui_main_stalker" x="558" y="0" width="100" height="273" />
+	
+	<texture id="ui_main_bandit" x="658" y="0" width="100" height="273" />
+	
+	<texture id="ui_main_freedom" x="758" y="0" width="107" height="273" />
+	
+	<texture id="ui_main_dolg" x="865" y="0" width="107" height="273" />
+
+   </file>
+   
+</w>

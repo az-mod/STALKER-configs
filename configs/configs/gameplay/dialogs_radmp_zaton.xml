@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<game_dialogs>
+    <dialog id="zat_a2_stalker_barmen_start_dialog">
+        <phrase_list>
+            <phrase id="0">
+                <text>zat_a2_stalker_barmen_start_dialog_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="zat_b106_stalker_garmata_start">
+        <phrase_list>
+            <phrase id="0">
+                <text>zat_b106_stalker_garmata_start_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="zat_b106_stalker_gonta_start">
+        <phrase_list>
+            <phrase id="0">
+                <text>zat_b106_stalker_gonta_start_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="zat_b215_stalker_guide_start">
+        <phrase_list>
+            <phrase id="0">
+                <text>zat_b215_stalker_guide_start_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="zat_b22_stalker_medic_dialog_start">
+        <phrase_list>
+            <phrase id="0">
+                <text>zat_b22_stalker_medic_dialog_start_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="zat_b3_stalker_tech_start">
+        <phrase_list>
+            <phrase id="0">
+                <text>zat_b3_stalker_tech_start_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="zat_b30_owl_stalker_trader_start_dialog">
+        <phrase_list>
+            <phrase id="0">
+                <text>zat_b30_owl_stalker_trader_start_dialog_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="zat_b33_stalker_snag_dialog_start">
+        <phrase_list>
+            <phrase id="0">
+                <text>zat_b33_stalker_snag_dialog_start_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="zat_b38_stalker_cop_start_dialog">
+        <phrase_list>
+            <phrase id="0">
+                <text>zat_b38_stalker_cop_start_dialog_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="zat_b51_stalker_nimble_start">
+        <phrase_list>
+            <phrase id="0">
+                <text>zat_b51_stalker_nimble_start_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="zat_b7_bandit_boss_sultan_start_dialog">
+        <phrase_list>
+            <phrase id="0">
+                <text>zat_b7_bandit_boss_sultan_start_dialog_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="zat_b106_stalker_crab_start">
+        <phrase_list>
+            <phrase id="0">
+                <text>zat_b106_stalker_crab_start_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+</game_dialogs>

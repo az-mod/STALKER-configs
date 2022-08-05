@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<game_dialogs>
+    <dialog id="bar_start_dialog_dolg_trader">
+        <phrase_list>
+            <phrase id="0">
+                <text>bar_start_dialog_dolg_trader_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="bar_story_kalgun_dialog">
+        <phrase_list>
+            <phrase id="1">
+                <text>bar_story_kalgun_dialog_1</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>bar_story_kalgun_dialog_2</text>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+            <phrase id="0">
+                <text>bar_story_kalgun_dialog_0</text>
+                <next>1</next>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="bar_start_dialog_sim_stalker">
+        <phrase_list>
+            <phrase id="0">
+                <text>bar_start_dialog_sim_stalker_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="bar_start_dialog_medic">
+        <phrase_list>
+            <phrase id="0">
+                <text>bar_start_dialog_medic_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="bar_start_dialog_mechanic">
+        <phrase_list>
+            <phrase id="0">
+                <text>bar_start_dialog_mechanic_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="bar_start_dialog_kalgun_arena">
+        <phrase_list>
+            <phrase id="0">
+                <text>bar_start_dialog_kalgun_arena_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="bar_start_dialog_barman">
+        <phrase_list>
+            <phrase id="0">
+                <text>bar_start_dialog_barman_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="bar_universal_dialog">
+        <phrase_list>
+            <phrase id="3">
+                <text>bar_universal_dialog_3</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="15">
+                <text>bar_universal_dialog_15</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="16">
+                <text>bar_universal_dialog_16</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="17">
+                <text>bar_universal_dialog_17</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="18">
+                <text>bar_universal_dialog_18</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="13">
+                <text>bar_universal_dialog_13</text>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+            <phrase id="7">
+                <text>bar_universal_dialog_7</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="8">
+                <text>bar_universal_dialog_8</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="10">
+                <text>bar_universal_dialog_10</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="9">
+                <text>bar_universal_dialog_9</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="11">
+                <text>bar_universal_dialog_11</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="12">
+                <text>bar_universal_dialog_12</text>
+                <next>13</next>
+            </phrase>
+            <phrase id="0">
+                <text>bar_universal_dialog_0</text>
+                <next>2</next>
+                <next>3</next>
+                <next>4</next>
+            </phrase>
+            <phrase id="14">
+                <text>bar_universal_dialog_14</text>
+                <next>15</next>
+                <next>16</next>
+                <next>17</next>
+                <next>18</next>
+            </phrase>
+            <phrase id="5">
+                <text>bar_universal_dialog_5</text>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+            <phrase id="4">
+                <text>bar_universal_dialog_4</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="6">
+                <text>bar_universal_dialog_6</text>
+                <next>7</next>
+                <next>8</next>
+                <next>9</next>
+                <next>10</next>
+                <next>11</next>
+                <next>12</next>
+            </phrase>
+            <phrase id="2">
+                <text>bar_universal_dialog_2</text>
+                <next>6</next>
+                <next>14</next>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="bar_story_mechanic_dialog">
+        <phrase_list>
+            <phrase id="2">
+                <text>bar_story_mechanic_dialog_2</text>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+            <phrase id="0">
+                <text>bar_story_mechanic_dialog_0</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>bar_story_mechanic_dialog_1</text>
+                <next>2</next>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="bar_story_medic_dialog">
+        <phrase_list>
+            <phrase id="0">
+                <text>bar_story_medic_dialog_0</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>bar_story_medic_dialog_1</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>bar_story_medic_dialog_2</text>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="bar_start_dialog_otshelnik">
+        <phrase_list>
+            <phrase id="0">
+                <text>bar_start_dialog_otshelnik_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="bar_story_otshelnik_dialog">
+        <phrase_list>
+            <phrase id="0">
+                <text>bar_story_otshelnik_dialog_0</text>
+                <next>1</next>
+            </phrase>
+            <phrase id="1">
+                <text>bar_story_otshelnik_dialog_1</text>
+                <next>2</next>
+            </phrase>
+            <phrase id="2">
+                <text>bar_story_otshelnik_dialog_2</text>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="bar_regular_quest_barman_dialog">
+        <phrase_list>
+            <phrase id="1">
+                <text>bar_regular_quest_barman_dialog_1</text>
+                <next>8</next>
+            </phrase>
+            <phrase id="8">
+                <text>bar_regular_quest_barman_dialog_8</text>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+            <phrase id="2">
+                <text>bar_regular_quest_barman_dialog_2</text>
+                <next>7</next>
+            </phrase>
+            <phrase id="7">
+                <text>bar_regular_quest_barman_dialog_7</text>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+            <phrase id="3">
+                <text>bar_regular_quest_barman_dialog_3</text>
+                <next>6</next>
+            </phrase>
+            <phrase id="6">
+                <text>bar_regular_quest_barman_dialog_6</text>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+            <phrase id="4">
+                <text>bar_regular_quest_barman_dialog_4</text>
+                <next>5</next>
+            </phrase>
+            <phrase id="5">
+                <text>bar_regular_quest_barman_dialog_5</text>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+            <phrase id="0">
+                <text>bar_regular_quest_barman_dialog_0</text>
+                <next>1</next>
+                <next>2</next>
+                <next>3</next>
+                <next>4</next>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="bar_start_dialog_voronin">
+        <phrase_list>
+            <phrase id="0">
+                <text>bar_start_dialog_voronin_0</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+</game_dialogs>

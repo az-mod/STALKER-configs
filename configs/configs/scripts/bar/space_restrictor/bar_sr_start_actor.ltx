@@ -1,0 +1,34 @@
+[logic] 
+active = sr_idle
+
+[sr_idle]
+on_game_timer = 10 | sr_idle@test
+
+[sr_idle@test]
+on_info = {-TEST_bar_1} sr_idle@0
+on_info2 = {+TEST_bar_1} sr_idle@nil
+
+[sr_idle@0]
+on_actor_inside = sr_idle@1 %+sp_a2_hero_to_bar_come +bar_start_quest_surget%
+
+[sr_idle@1]
+on_info = sr_idle@2 %=remove_squad(bar_dolg_centr_base) =remove_squad(bar_stalker_angar_4) =remove_squad(bar_stalker_angar_5) =remove_squad(bar_stalker_angar_1) =remove_squad(bar_dolg_street_walkers) =remove_squad(bar_csky_lager) =remove_squad(bar_dolg_blockhouse) =remove_squad(bar_dolg_blockhouse_2) =remove_squad(bar_stalker_blockhouse)%
+
+[sr_idle@2]
+on_game_timer = 15 | sr_timer %=give_task(bar_cover_surget)%
+
+[sr_timer]
+type = dec
+string = "”крытьс€ от выброса"
+start_value = 160000
+on_value = 0 | sr_idle@nil %=kill_actor +bar_cover_surget_fail%
+on_info = {+bar_cover_surget_complete} sr_idle@3 
+
+[sr_idle@3]
+on_game_timer = 20 | sr_idle@4 %=give_task(bar_first_talk_barmen) +bar_first_talk_barmen_dialog_open%
+
+[sr_idle@4]
+on_info = {+bar_surget_quest_complite} sr_idle@nil %=create_squad(bar_stalker_blockhouse:bar_smart_terrain_0_1) =create_squad(bar_dolg_blockhouse_2:bar_smart_terrain_1_4) =create_squad(bar_dolg_blockhouse:bar_smart_terrain_1_3) =create_squad(bar_csky_lager:bar_smart_terrain_2_0) =create_squad(bar_dolg_street_walkers:bar_smart_terrain_0_3) =create_squad(bar_stalker_angar_1:bar_smart_terrain_0_4) =create_squad(bar_stalker_angar_5:bar_smart_terrain_0_8) =create_squad(bar_stalker_angar_4:bar_smart_terrain_0_7) =create_squad(bar_dolg_centr_base:bar_smart_terrain_1_1)%
+
+
+[sr_idle@nil]

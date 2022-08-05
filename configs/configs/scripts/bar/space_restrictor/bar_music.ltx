@@ -1,0 +1,17 @@
+[logic]
+active = sr_idle
+
+[sr_idle]
+on_game_timer = 1000 | sr_idle@1 %+bar_player_music_info%
+on_info = {-bar_surget_quest_complite +bar_start_quest_surget} sr_idle@surget
+
+[sr_idle@1]
+on_info = {-bar_megafon_alarm =dist_to_actor_le(120)} sr_idle@wait %=play_sound(bar_megafon_music)%
+on_info2 = {-bar_surget_quest_complite +bar_start_quest_surget} sr_idle@surget
+
+[sr_idle@wait]
+on_game_timer = 700 | sr_idle %-bar_player_music_info%
+on_info = {-bar_surget_quest_complite +bar_start_quest_surget} sr_idle@surget
+
+[sr_idle@surget]
+on_info = {+bar_surget_quest_complite} sr_idle

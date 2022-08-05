@@ -1,0 +1,67 @@
+[alife]
+    schedule_min				= 1												; milliseconds
+    schedule_max				= 1												; milliseconds
+    process_time				= 10000											; microseconds
+    update_monster_factor		= 0.1
+    time_factor					= 10;	1;	;396.0;скорость для демонстрации смены дня и ночи		
+    normal_time_factor			= 10;	животные в оффлайне перемещаются со скоростью, делённой на этот фактор (чтобы не бегали очень быстро)
+    switch_distance				= 150;0	;150	;75.0											; metres
+    switch_factor				= 0.1											; 
+    start_time					= 9:00:00
+    start_date					= 03.08.2012
+    autosave_interval			= 01:05:00
+    delay_autosave_interval		= 00:00:30
+	objects_per_update			= 10
+	start_game_callback			= _G.start_game_callback					; on starting new game or loading saved one
+	
+[alife_surge]
+    surge_say1 = 3  		; В минутах 
+	surge_say2 = 15			; 2 фраза
+	surge_say3 = 37			; 3
+	
+	surge_shock = 15			 
+	surge_kill  = 24		 
+	surge_end   = 37
+	
+	surge_min_time = 24		; В часах (Мин время рестарта)
+	surge_max_time = 48		; В часах (Макс время рестарта выброса)
+ 	
+	surge_phrase_after = jup_a6_stalker_medik_after_surge
+	surge_phrase_1 	   = jup_a6_stalker_medik_phase_1	  
+	surge_phrase_2 	   = jup_a6_stalker_medik_phase_2
+	
+	surge_wave_1 	   = 20
+	surge_wave_2 	   = 24 
+	surge_wave_3 	   = 28 
+	surge_wave_4 	   = 32	
+	
+	; surge_phrase_after = zat_a2_stalker_barmen_after_surge
+	; surge_phrase_1 	 = zat_a2_stalker_barmen_phase_1 
+	; surge_phrase_2 	 = zat_a2_stalker_barmen_phase_2
+		
+	; surge_phrase_after = pri_a17_kovalsky_after_surge
+	; surge_phrase_1 	 = pri_a17_kovalsky_phrase_1
+	; surge_phrase_2 	 = pri_a17_kovalsky_phrase_2	
+	
+[alife_psistorm]
+	psi_storm_duration = 40 ;Минуты Продолжительность пси выброса 
+	psi_storm_task 	   = 1  ;Время выдачи задания 
+	psi_storm_siren    = 5  ;Сирена 
+	psi_storm_vortex   = 10 ;Всплески пси в небе 
+	
+	psi_storm_min 	   = 12 ;Периоды 
+	psi_storm_max      = 24 ;
+	
+[alife_fallout]
+	fallout_duration_max = 30 ;Минуты 
+	fallout_duration_min = 10 ;Минуты 
+	
+	fallout_min		   = 6  ;Периоды	
+	fallout_max		   = 12 ;
+ 
+
+	
+	
+[sun_parrametres]
+sun_dir_azimuth = 3.14	; Для динамики положение солнца 
+sun_static = true 		; Для атмосфера нужно статическое солнце (считывается с параметров погоды его положение и луны)

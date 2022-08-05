@@ -1,0 +1,7 @@
+[smart_terrain]
+squad_id = 1
+max_population = 1
+arrive_dist = 15
+
+[exclusive]
+tlh_test_military_chair = rad_multiplayer_0\smart_exclusive_logic\stalker_military.ltx

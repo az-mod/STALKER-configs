@@ -1,0 +1,32 @@
+[logic@bar_stalker_100rentgen_barman]
+active = walker
+suitable = {=check_npc_name(bar_npc_barman)} true, false
+;trade = misc\trade\bar\shop_trader_barman.ltx
+can_select_weapon = false
+level_spot = trader
+prior = 300
+
+[walker]
+path_walk = barman_walk
+path_look = barman_look
+gather_items_enabled = false
+corpse_detection_enabled = false
+combat_ignore_keep_when_attacked = true 
+combat_ignore_cond = true
+invulnerable = true
+meet = meet
+use_camp = false
+
+
+[meet]
+close_snd_hello = bar_barman_meet_greet
+;close_snd_bye 	= 
+close_anim 	= nil
+close_victim 	= nil
+far_anim 	= nil
+far_victim 	= nil
+close_distance  = 0
+far_distance 	= 0
+close_snd_distance = 3
+use = {=actor_enemy} false, true
+allow_break 	= false

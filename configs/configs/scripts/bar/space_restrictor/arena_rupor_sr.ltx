@@ -1,0 +1,33 @@
+[logic]
+active = sr_idle@wait
+
+[sr_idle@wait]
+on_info = {+arena_fight} sr_idle@play_intro_rupor
+
+[sr_idle@play_intro_rupor]
+on_info  = {-arena_chempion_fight -arena_chempion_fight_bodyguard -arena_chempion_fight_friend} sr_idle@wait_intro_finish %=play_sound(mega_arena_new_fight)%
+on_info2 = {+arena_chempion_fight} sr_idle@wait_intro_finish %=play_sound(bar_fight_8_ready)%
+on_info3 = {+arena_chempion_fight_bodyguard} sr_idle@wait_intro_finish %=play_sound(bar_fight_8_ready)%
+on_info4 = {+arena_chempion_fight_friend} sr_idle@wait_intro_finish %=play_sound(bar_fight_8_ready)%  
+
+[sr_idle@wait_intro_finish]
+on_signal = sound_end | sr_idle@play_start_rupor
+
+[sr_idle@play_start_rupor]
+on_info  = {-arena_chempion_fight -arena_chempion_fight_bodyguard -arena_chempion_fight_friend +arena_monster_on_arena} sr_idle@play_finish_rupor %+arena_start_public =play_sound(bar_fight_1_ready)%
+on_info2 = {-arena_chempion_fight -arena_chempion_fight_bodyguard -arena_chempion_fight_friend -arena_monster_on_arena} sr_idle@play_finish_rupor %+arena_start_public =play_sound(bar_fight_2_ready)%
+on_info3 = {+arena_chempion_fight} sr_idle@play_finish_rupor %+arena_start_public%
+on_info4 = {+arena_chempion_fight_bodyguard} sr_idle@play_finish_rupor %+arena_start_public%
+on_info5 = {+arena_chempion_fight_friend} sr_idle@play_finish_rupor %+arena_start_public%
+
+[sr_idle@play_finish_rupor]
+on_info  = {-arena_fight -arena_chempion_fight -arena_chempion_fight_bodyguard -arena_chempion_fight_friend -arena_monster_on_arena} sr_idle@stop %-arena_start_public =play_sound(bar_fight_2_finish)%
+on_info2 = {-arena_fight -arena_chempion_fight -arena_chempion_fight_bodyguard -arena_chempion_fight_friend +arena_monster_on_arena} sr_idle@stop %-arena_start_public -arena_monster_on_arena =play_sound(bar_fight_7_finish)%
+on_info3 = {-arena_fight +arena_chempion_fight} sr_idle@stop %-arena_start_public -arena_chempion_fight =play_sound(bar_fight_8_finish)%
+on_info4 = {-arena_fight +arena_chempion_fight_bodyguard -bar_arena_bodyguard_death} sr_idle@stop %-arena_start_public -arena_chempion_fight_bodyguard =play_sound(bar_fight_8_finish)%
+on_info5 = {-arena_fight +arena_chempion_fight_bodyguard +bar_arena_bodyguard_death} sr_idle@stop %-arena_start_public -arena_chempion_fight_bodyguard =play_sound(bar_fight_2_finish)%
+on_info6 = {-arena_fight +arena_chempion_fight_friend -bar_arena_friend_death} sr_idle@stop %-arena_start_public -arena_chempion_fight_friend =play_sound(bar_fight_8_finish)%
+on_info7 = {-arena_fight +arena_chempion_fight_friend +bar_arena_friend_death} sr_idle@stop %-arena_start_public -arena_chempion_fight_friend =play_sound(bar_fight_2_finish)%
+
+[sr_idle@stop]
+on_game_timer = 40 | sr_idle@wait

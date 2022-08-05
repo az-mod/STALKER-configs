@@ -1,0 +1,64 @@
+[logic]
+active = sr_idle@wait
+
+[sr_idle@wait]
+on_info  = {+arena_fight +arena_start_assalut_1 -bar_arena_enemy_assalut_1_death} sr_idle@spawn_1
+on_info2 = {+arena_fight +arena_start_assalut_2 -bar_arena_enemy_assalut_2_death} sr_idle@spawn_2
+on_info3 = {+arena_fight +arena_start_assalut_3 -bar_arena_enemy_assalut_3_death} sr_idle@spawn_3
+on_info4 = {+arena_fight +arena_start_assalut_4 -bar_arena_enemy_assalut_4_death} sr_idle@spawn_4
+on_info5 = {+arena_fight +arena_start_assalut_5 -bar_arena_enemy_assalut_5_death} sr_idle@spawn_5 %+arena_chempion_fight%
+
+;------------------------------------------İÒÀÏ ¹1------------------------------------------------
+[sr_idle@spawn_1]
+on_info = sr_idle@wait_attack_1 %=create_squad(bar_arena_assalut_1:arena_smart_enemy)%
+
+[sr_idle@wait_attack_1]
+on_info = {+arena_attack} sr_idle@fight_1 %=squad_arena_attack(bar_arena_assalut_1)%
+
+[sr_idle@fight_1]
+on_info = {+bar_arena_enemy_assalut_1_death} sr_idle@wait %-arena_fight -arena_attack%
+on_info2 = %=hit_enemy_door(bar_arena_assalut_1:arena_door_hit_zone_sr)%
+
+;------------------------------------------İÒÀÏ ¹2------------------------------------------------
+[sr_idle@spawn_2]
+on_info = sr_idle@wait_attack_2 %=create_squad(bar_arena_assalut_2:arena_smart_enemy)%
+
+[sr_idle@wait_attack_2]
+on_info = {+arena_attack} sr_idle@fight_2 %=squad_arena_attack(bar_arena_assalut_2)%
+
+[sr_idle@fight_2]
+on_info = {+bar_arena_enemy_assalut_2_death} sr_idle@wait %-arena_fight -arena_attack%
+on_info2 = %=hit_enemy_door(bar_arena_assalut_2:arena_door_hit_zone_sr)%
+
+;------------------------------------------İÒÀÏ ¹3------------------------------------------------
+[sr_idle@spawn_3]
+on_info = sr_idle@wait_attack_3 %=create_squad(bar_arena_assalut_3:arena_smart_enemy)%
+
+[sr_idle@wait_attack_3]
+on_info = {+arena_attack} sr_idle@fight_3 %=squad_arena_attack(bar_arena_assalut_3)%
+
+[sr_idle@fight_3]
+on_info = {+bar_arena_enemy_assalut_3_death} sr_idle@wait %-arena_fight -arena_attack%
+on_info2 = %=hit_enemy_door(bar_arena_assalut_3:arena_door_hit_zone_sr)%
+
+;------------------------------------------İÒÀÏ ¹4------------------------------------------------
+[sr_idle@spawn_4]
+on_info = sr_idle@wait_attack_4 %=create_squad(bar_arena_assalut_4:arena_smart_enemy)%
+
+[sr_idle@wait_attack_4]
+on_info = {+arena_attack} sr_idle@fight_4 %=squad_arena_attack(bar_arena_assalut_4)%
+
+[sr_idle@fight_4]
+on_info = {+bar_arena_enemy_assalut_4_death} sr_idle@wait %-arena_fight -arena_attack%
+on_info2 = %=hit_enemy_door(bar_arena_assalut_4:arena_door_hit_zone_sr)%
+
+;------------------------------------------İÒÀÏ ¹5------------------------------------------------
+[sr_idle@spawn_5]
+on_info = sr_idle@wait_attack_5 %=create_squad(bar_arena_assalut_5:arena_smart_enemy)%
+
+[sr_idle@wait_attack_5]
+on_info = {+arena_attack} sr_idle@fight_5 %=squad_arena_attack(bar_arena_assalut_5)%
+
+[sr_idle@fight_5]
+on_info = {+bar_arena_enemy_assalut_5_death} sr_idle@wait %-arena_fight -arena_attack%
+on_info2 = %=hit_enemy_door(bar_arena_assalut_5:arena_door_hit_zone_sr)%

@@ -1,0 +1,58 @@
+mp_wpn_groza	= 2, prob=1 \n
+mp_wpn_fort	= 2, prob=0.5 \n
+mp_wpn_desert_eagle	= 2, prob=0.5 \n
+mp_wpn_bm16	= 2, prob=0.5 \n
+mp_wpn_wincheaster1300	= 2, prob=0.5 \n
+mp_wpn_spas12	= 2, prob=0.5 \n
+mp_wpn_protecta	= 2, prob=0.5 \n
+mp_wpn_ak74u	= 2, prob=0.5 \n
+mp_wpn_ak74	= 2, prob=0.5 \n
+mp_wpn_mp5	= 2, prob=0.5 \n
+mp_wpn_l85	= 2, prob=0.5 \n
+mp_wpn_lr300	= 2, prob=0.5 \n
+mp_wpn_abakan	= 2, prob=0.5 \n
+mp_wpn_sig550	= 2, prob=0.5 \n
+mp_wpn_g36	= 2, prob=0.5 \n
+mp_wpn_fn2000	= 2, prob=0.5 \n
+mp_wpn_val	= 2, prob=0.5 \n
+mp_wpn_vintorez	= 2, prob=0.5 \n
+mp_wpn_svd	= 2, prob=0.5 \n
+mp_wpn_svu	= 2, prob=0.5 \n
+mp_wpn_rg-6	= 2, prob=0.5 \n
+mp_wpn_toz34	= 2, prob=0.5 \n
+
+mp_ammo_vog-25 = 10, prob=1 \n
+mp_ammo_m209 = 10, prob=1 \n
+mp_ammo_9x19_fmj_4mp5 = 10, prob=1 \n
+mp_ammo_9x19_pbp_4mp5 = 10, prob=1 \n
+mp_ammo_5.45x39_fmj = 10, prob=1 \n
+mp_ammo_5.45x39_ap = 10, prob=1 \n
+mp_ammo_5.56x45_ss190 = 10, prob=1 \n
+mp_ammo_5.56x45_ap = 10, prob=1 \n
+mp_ammo_7.62x54_7h1 = 10, prob=1 \n
+mp_ammo_9x39_pab9 = 10, prob=1 \n
+mp_ammo_9x39_ap = 10, prob=1 \n
+mp_ammo_12x70_buck = 10, prob=1 \n
+mp_ammo_12x76_zhekan = 10, prob=1 \n
+mp_ammo_pkm_100 = 10, prob=1 \
+
+mp_wpn_binoc = 5, prob=1 \n
+mp_medkit = 10, prob=1 \n
+mp_bandage = 5, prob=1 \n
+antirad = 1, prob=1 \n
+
+kolbasa = 1, prob=1 \n
+bread = 1, prob=1 \n
+
+detector_simple = 1, prob=1 \n
+detector_advanced = 1, prob=1 \n
+detector_elite = 1, prob=1 \n
+
+military_outfit = 1, prob=1 \n
+svoboda_heavy_outfit = 1, prob=1 \n
+stalker_outfit = 1, prob=1 \n
+dolg_outfit = 1, prob=1 \n
+svoboda_light_outfit = 1, prob=1 \n
+
+
+

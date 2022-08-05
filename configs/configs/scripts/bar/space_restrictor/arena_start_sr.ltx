@@ -1,0 +1,26 @@
+[logic]
+active = sr_idle@first
+
+[sr_idle@first]
+on_info = {+arena_ready} sr_idle@wait %=give_task(bar_arena_goto_arena)%
+
+[sr_idle@wait]
+on_actor_inside = {+arena_ready -arena_fight} sr_cutscene@cam %+arena_fight +talk_kostolom_after_fight +bar_arena_goto_arena_complete%
+
+[sr_cutscene@cam]
+point = bar_arena_actor_walk
+look = bar_arena_actor_look
+cam_effector = scenario_cam\level_bar\arena
+enable_ui_on_end = true
+global_cameffect = true
+on_signal = cameff_end | sr_idle@fight %+arena_attack%
+
+[sr_idle@fight]
+on_info = {-arena_fight -arena_attack} sr_idle@clear_arena 
+
+[sr_idle@clear_arena]
+on_info  = {-talk_kostolom_about_inventory} sr_idle@wait_after_fight %=give_task(bar_arena_kostolom_after_fight)%
+on_info2 = {+talk_kostolom_about_inventory} sr_idle@wait_after_fight 
+
+[sr_idle@wait_after_fight]
+on_info = {-arena_ready -arena_fight} sr_idle@wait
